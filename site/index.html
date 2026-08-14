@@ -1,0 +1,799 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Thailand · 1–14 Nov 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Instrument+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0E332E;
+    --bg2:#0A2622;
+    --surface:#143F38;
+    --surface2:#18473F;
+    --line:rgba(240,235,220,0.13);
+    --line-strong:rgba(240,235,220,0.28);
+    --rice:#F0EBDC;
+    --rice-dim:#D3CFBF;
+    --muted:#8FA69F;
+    --bangkok:#E6AC43;
+    --chiangmai:#DE8A4C;
+    --krabi:#46BFB0;
+    --khaosok:#69AB60;
+    --accent:var(--bangkok);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    background:
+      radial-gradient(1200px 700px at 82% -8%, rgba(230,172,67,0.10), transparent 60%),
+      radial-gradient(900px 600px at 5% 105%, rgba(70,191,176,0.09), transparent 55%),
+      var(--bg);
+    color:var(--rice);
+    font-family:"Instrument Sans",system-ui,sans-serif;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+  .wrap{max-width:1000px;margin:0 auto;padding:0 26px}
+
+  /* ---------- typography helpers ---------- */
+  .mono{font-family:"IBM Plex Mono",monospace;font-weight:400}
+  .eyebrow{
+    font-family:"IBM Plex Mono",monospace;
+    font-size:12.5px;letter-spacing:.26em;text-transform:uppercase;
+    color:var(--muted);
+  }
+  h1,h2,h3{font-family:"Fraunces",serif;font-weight:500;line-height:1.04;letter-spacing:-0.01em}
+
+  /* ---------- hero ---------- */
+  .hero{position:relative;padding:74px 0 30px}
+  .hero .eyebrow{margin-bottom:22px}
+  .hero h1{
+    font-size:clamp(44px,8.4vw,86px);
+    font-weight:400;
+    letter-spacing:-0.025em;
+    color:var(--rice);
+  }
+  .hero h1 em{
+    font-style:italic;font-weight:400;
+    color:var(--bangkok);
+  }
+  .hero .dek{
+    margin-top:26px;max-width:52ch;
+    font-size:clamp(16px,2.1vw,18.5px);
+    color:var(--rice-dim);
+  }
+  .hero .dek b{color:var(--rice);font-weight:600}
+
+  /* route ribbon */
+  .ribbon{
+    margin-top:40px;
+    display:flex;align-items:center;flex-wrap:wrap;gap:4px 2px;
+    padding:18px 20px;
+    border:1px solid var(--line);
+    border-radius:14px;
+    background:linear-gradient(180deg,rgba(255,255,255,0.02),rgba(0,0,0,0.06));
+  }
+  .node{display:flex;flex-direction:column;gap:3px;padding:2px 4px}
+  .node .lbl{font-family:"Fraunces",serif;font-size:15px;white-space:nowrap}
+  .node .tag{font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.14em;color:var(--muted);text-transform:uppercase}
+  .hop{display:flex;align-items:center;color:var(--muted);opacity:.85;padding:0 3px 12px}
+  .hop svg{width:19px;height:19px;display:block}
+  .term .lbl{color:var(--muted)}
+
+  /* stat strip */
+  .stats{
+    margin-top:22px;display:flex;flex-wrap:wrap;gap:0;
+    border-top:1px solid var(--line);
+  }
+  .stat{padding:20px 26px 6px 0;margin-right:26px}
+  .stat .n{font-family:"Fraunces",serif;font-size:30px;line-height:1;color:var(--rice)}
+  .stat .n small{font-size:15px;color:var(--muted)}
+  .stat .k{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.15em;text-transform:uppercase;color:var(--muted);margin-top:8px}
+
+  /* ---------- region section ---------- */
+  .region{padding:56px 0 8px;position:relative}
+  .region-head{
+    display:flex;align-items:baseline;gap:16px;flex-wrap:wrap;
+    padding-bottom:8px;margin-bottom:30px;
+    border-bottom:1px solid var(--line);
+  }
+  .region-head .idx{
+    font-family:"IBM Plex Mono",monospace;font-size:12px;color:var(--accent);
+    letter-spacing:.1em;padding-top:6px;
+  }
+  .region-head h2{font-size:clamp(30px,5vw,44px);color:var(--rice)}
+  .region-head h2 .dash{color:var(--accent);font-style:italic}
+  .region-head .when{
+    font-family:"IBM Plex Mono",monospace;font-size:12.5px;color:var(--muted);
+    letter-spacing:.08em;margin-left:auto;padding-top:8px;white-space:nowrap;
+  }
+  .region-desc{max-width:60ch;color:var(--rice-dim);font-size:16px;margin:-14px 0 26px}
+  .region-desc .accent-mark{color:var(--accent)}
+
+  /* day cards on a spine */
+  .days{position:relative;margin-left:8px}
+  .days::before{
+    content:"";position:absolute;left:0;top:6px;bottom:14px;width:2px;
+    background:linear-gradient(180deg,var(--accent),transparent);
+    opacity:.5;
+  }
+  .day{
+    position:relative;padding-left:34px;margin-bottom:20px;
+  }
+  .day::before{
+    content:"";position:absolute;left:-5px;top:10px;width:12px;height:12px;
+    border-radius:50%;background:var(--bg);border:2.5px solid var(--accent);
+  }
+  .card{
+    display:grid;grid-template-columns:96px 1fr;gap:0;
+    border:1px solid var(--line);border-radius:15px;overflow:hidden;
+    background:linear-gradient(180deg,var(--surface),var(--bg2));
+  }
+  .datecol{
+    padding:20px 14px;
+    background:rgba(0,0,0,0.16);
+    border-right:1px solid var(--line);
+    text-align:center;display:flex;flex-direction:column;gap:2px;justify-content:center;
+  }
+  .datecol .dow{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.2em;color:var(--accent);text-transform:uppercase}
+  .datecol .dnum{font-family:"Fraunces",serif;font-size:38px;line-height:.95;color:var(--rice)}
+  .datecol .mon{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.2em;color:var(--muted);text-transform:uppercase}
+  .datecol .dtag{
+    margin-top:9px;font-family:"IBM Plex Mono",monospace;font-size:9.5px;
+    letter-spacing:.12em;color:var(--muted);text-transform:uppercase;
+    border-top:1px solid var(--line);padding-top:8px;
+  }
+  .body{padding:19px 22px 17px}
+  .body h3{font-size:22px;color:var(--rice);margin-bottom:11px}
+  .plan{list-style:none;display:flex;flex-direction:column;gap:8px}
+  .plan li{position:relative;padding-left:17px;color:var(--rice-dim);font-size:15px}
+  .plan li::before{
+    content:"";position:absolute;left:0;top:10px;width:5px;height:5px;border-radius:50%;
+    background:var(--accent);opacity:.85;
+  }
+  .plan li b{color:var(--rice);font-weight:600}
+  .logi{
+    margin-top:15px;padding-top:12px;border-top:1px dashed var(--line-strong);
+    display:flex;flex-wrap:wrap;gap:7px 8px;
+  }
+  .chip{
+    font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.04em;
+    color:var(--rice-dim);
+    border:1px solid var(--line);border-radius:20px;padding:3px 11px;
+    display:inline-flex;align-items:center;gap:6px;white-space:nowrap;
+  }
+  .chip svg{width:12px;height:12px;opacity:.8}
+  .chip .key{color:var(--accent)}
+
+  /* good-to-know note */
+  .note{
+    margin:2px 0 26px 8px;padding:14px 18px;
+    border-left:3px solid var(--accent);
+    background:rgba(255,255,255,0.025);border-radius:0 10px 10px 0;
+    font-size:14.5px;color:var(--rice-dim);max-width:64ch;
+  }
+  .note b{color:var(--rice)}
+
+  /* ---------- transfers ---------- */
+  .transfer{
+    margin:22px 0 26px;display:flex;align-items:center;gap:14px;
+    padding:13px 20px;border:1px dashed var(--line-strong);border-radius:12px;
+    background:rgba(0,0,0,0.12);
+  }
+  .transfer .ic{color:var(--accent);display:flex}
+  .transfer .ic svg{width:22px;height:22px}
+  .transfer .t-main{font-family:"Fraunces",serif;font-size:17px;color:var(--rice)}
+  .transfer .t-sub{font-family:"IBM Plex Mono",monospace;font-size:11.5px;color:var(--muted);letter-spacing:.05em;margin-top:1px}
+  .transfer .t-time{margin-left:auto;font-family:"IBM Plex Mono",monospace;font-size:12px;color:var(--rice-dim);text-align:right;white-space:nowrap}
+
+  /* ---------- the sleeper-train ticket (signature) ---------- */
+  .ticket-zone{margin:30px 0 8px}
+  .ticket{
+    position:relative;display:grid;grid-template-columns:1fr 190px;
+    border-radius:16px;overflow:hidden;
+    background:
+      linear-gradient(135deg, #1c4d3f 0%, #163f38 55%, #12352f 100%);
+    border:1px solid rgba(230,172,67,0.32);
+    box-shadow:0 24px 60px -30px rgba(0,0,0,0.7);
+  }
+  .ticket::before,.ticket::after{
+    content:"";position:absolute;left:calc(100% - 190px);width:20px;height:20px;
+    border-radius:50%;background:var(--bg);z-index:3;transform:translateX(-50%);
+  }
+  .ticket::before{top:-10px}
+  .ticket::after{bottom:-10px}
+  .stub-line{
+    position:absolute;left:calc(100% - 190px);top:12px;bottom:12px;
+    border-left:2px dashed rgba(230,172,67,0.45);z-index:2;
+  }
+  .t-left{padding:24px 26px 22px}
+  .t-tophead{display:flex;align-items:center;gap:11px;margin-bottom:20px}
+  .t-tophead .badge{
+    font-family:"IBM Plex Mono",monospace;font-size:10.5px;letter-spacing:.16em;
+    text-transform:uppercase;color:#0E332E;background:var(--bangkok);
+    padding:4px 10px;border-radius:5px;font-weight:500;
+  }
+  .t-tophead .svc{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.14em;color:var(--muted);text-transform:uppercase}
+  .t-route{display:flex;align-items:flex-end;gap:16px}
+  .t-stn{display:flex;flex-direction:column}
+  .t-stn .time{font-family:"Fraunces",serif;font-size:40px;line-height:.9;color:var(--rice)}
+  .t-stn .place{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.08em;color:var(--bangkok);margin-top:7px;text-transform:uppercase}
+  .t-stn .sub{font-family:"IBM Plex Mono",monospace;font-size:10px;color:var(--muted);margin-top:2px;letter-spacing:.04em}
+  .t-arrow{flex:1;display:flex;flex-direction:column;align-items:center;gap:4px;padding-bottom:22px}
+  .t-arrow .dur{font-family:"IBM Plex Mono",monospace;font-size:10px;color:var(--muted);letter-spacing:.1em}
+  .t-arrow .rail{width:100%;height:14px;color:var(--bangkok);opacity:.8}
+  .t-arrow .rail svg{width:100%;height:14px}
+  .t-meta{margin-top:22px;display:flex;flex-wrap:wrap;gap:6px 8px}
+  .t-meta .chip{border-color:rgba(230,172,67,0.28)}
+  .t-meta .chip .key{color:var(--bangkok)}
+
+  .t-right{
+    padding:24px 20px;display:flex;flex-direction:column;justify-content:space-between;
+    background:rgba(0,0,0,0.14);
+  }
+  .t-right .rlabel{font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.16em;color:var(--muted);text-transform:uppercase}
+  .t-right .rnight{font-family:"Fraunces",serif;font-size:22px;color:var(--rice);margin-top:4px;line-height:1.05}
+  .barcode{display:flex;gap:2px;align-items:flex-end;height:44px;margin-top:16px}
+  .barcode i{display:block;width:3px;background:var(--rice);opacity:.85}
+  .t-right .seat{font-family:"IBM Plex Mono",monospace;font-size:10.5px;color:var(--muted);letter-spacing:.1em;margin-top:12px}
+  .t-right .seat b{color:var(--bangkok);font-weight:500}
+
+  /* ---------- footer ---------- */
+  .foot{padding:52px 0 70px;margin-top:40px;border-top:1px solid var(--line)}
+  .foot h2{font-size:26px;color:var(--rice);margin-bottom:22px}
+  .tips{display:grid;grid-template-columns:1fr 1fr;gap:14px 30px}
+  .tip{display:flex;gap:12px;font-size:14.5px;color:var(--rice-dim)}
+  .tip .num{font-family:"IBM Plex Mono",monospace;font-size:12px;color:var(--krabi);padding-top:2px}
+  .tip b{color:var(--rice);font-weight:600}
+  .sign{margin-top:40px;font-family:"IBM Plex Mono",monospace;font-size:11.5px;color:var(--muted);letter-spacing:.06em}
+
+  /* reveal */
+  .reveal{opacity:0;transform:translateY(16px);transition:opacity .6s ease,transform .6s ease}
+  .reveal.in{opacity:1;transform:none}
+
+  @media (max-width:680px){
+    .card{grid-template-columns:76px 1fr}
+    .datecol{padding:16px 8px}
+    .datecol .dnum{font-size:30px}
+    .datecol .dtag{display:none}
+    .ticket{grid-template-columns:1fr}
+    .ticket::before,.ticket::after,.stub-line{display:none}
+    .t-right{border-top:2px dashed rgba(230,172,67,0.4);flex-direction:row;align-items:center;justify-content:space-between;gap:14px}
+    .barcode{margin-top:0}
+    .tips{grid-template-columns:1fr}
+    .region-head .when{margin-left:0;width:100%}
+    .t-stn .time{font-size:32px}
+    .stat{margin-right:18px}
+  }
+  @media (prefers-reduced-motion:reduce){
+    .reveal{opacity:1;transform:none;transition:none}
+    html{scroll-behavior:auto}
+  }
+
+  /* ---------- calendar overview ---------- */
+  .cal{display:grid;grid-template-columns:repeat(7,1fr);gap:6px}
+  .cal-head{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);text-align:center;padding:0 0 6px}
+  .cal-day{position:relative;min-height:80px;border:1px solid var(--line);border-radius:10px;padding:9px 10px;display:flex;flex-direction:column;background:rgba(0,0,0,0.10)}
+  .cal-day .cn{font-family:"Fraunces",serif;font-size:20px;line-height:1;color:var(--rice-dim)}
+  .cal-day .cl{margin-top:auto;font-family:"IBM Plex Mono",monospace;font-size:9.5px;letter-spacing:.03em;text-transform:uppercase;color:var(--muted)}
+  .cal-day .cg{position:absolute;top:9px;right:9px;width:14px;height:14px}
+  .cal-day.trip .cn{color:var(--rice)}
+  .cal-day.off{min-height:80px;background:transparent;border-color:rgba(240,235,220,0.07)}
+  .cal-day.off .cn{color:var(--muted);opacity:.55;font-size:16px}
+  .cal-pad{min-height:80px;border:1px dashed var(--line);border-radius:10px;opacity:.2}
+  .fest{margin-top:auto;font-family:"IBM Plex Mono",monospace;font-size:8.5px;letter-spacing:.02em;color:#C6A4D8;text-transform:uppercase;opacity:.9}
+  .d-bkk{border-color:rgba(230,172,67,.5);background:linear-gradient(180deg,rgba(230,172,67,.16),rgba(230,172,67,.03))}
+  .d-bkk .cl,.d-bkk .cg{color:var(--bangkok)}
+  .d-cnx{border-color:rgba(222,138,76,.5);background:linear-gradient(180deg,rgba(222,138,76,.16),rgba(222,138,76,.03))}
+  .d-cnx .cl,.d-cnx .cg{color:var(--chiangmai)}
+  .d-krb{border-color:rgba(70,191,176,.5);background:linear-gradient(180deg,rgba(70,191,176,.16),rgba(70,191,176,.03))}
+  .d-krb .cl,.d-krb .cg{color:var(--krabi)}
+  .d-kks{border-color:rgba(105,171,96,.5);background:linear-gradient(180deg,rgba(105,171,96,.16),rgba(105,171,96,.03))}
+  .d-kks .cl,.d-kks .cg{color:var(--khaosok)}
+  .cal-legend{display:flex;flex-wrap:wrap;gap:10px 18px;margin-top:18px;padding-top:16px;border-top:1px solid var(--line)}
+  .cal-legend .lg{display:flex;align-items:center;gap:8px;font-family:"IBM Plex Mono",monospace;font-size:11.5px;color:var(--rice-dim);letter-spacing:.03em}
+  .cal-legend .sw{width:13px;height:13px;border-radius:4px;display:inline-block}
+  .sw-bkk{background:var(--bangkok)}.sw-cnx{background:var(--chiangmai)}.sw-krb{background:var(--krabi)}.sw-kks{background:var(--khaosok)}
+  .cal-legend .lg.mv{color:var(--muted)}
+  @media (max-width:680px){
+    .cal{gap:4px}
+    .cal-day,.cal-pad,.cal-day.off{min-height:54px;padding:5px 6px}
+    .cal-day .cn{font-size:15px}
+    .cal-day .cl,.fest{display:none}
+    .cal-day .cg{width:11px;height:11px;top:5px;right:5px}
+    .cal-head{font-size:9px;letter-spacing:.05em}
+  }
+
+  .dl{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+  .dlbtn{
+    display:inline-flex;align-items:center;gap:8px;
+    font-family:"IBM Plex Mono",monospace;font-size:12px;letter-spacing:.06em;
+    text-transform:uppercase;text-decoration:none;
+    color:var(--rice);border:1px solid var(--line-strong);border-radius:22px;
+    padding:10px 18px;background:rgba(255,255,255,0.03);transition:background .2s,border-color .2s;
+  }
+  .dlbtn:hover{background:rgba(230,172,67,0.12);border-color:var(--bangkok);color:var(--bangkok)}
+</style>
+</head>
+<body>
+
+<!-- ================= HERO ================= -->
+<header class="hero">
+  <div class="wrap">
+    <div class="eyebrow reveal">Thailand · 1–14 November 2026 · 14 days · 2 travellers</div>
+    <h1 class="reveal">Up the rails,<br><em>down the coast</em></h1>
+
+    <div class="ribbon reveal">
+      <span class="node term"><span class="lbl">BKK</span><span class="tag">EK374 · 07:35</span></span>
+      <span class="hop"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12h20"/><path d="M13 5l7 7-7 7"/></svg></span>
+      <span class="node"><span class="lbl">Bangkok</span><span class="tag">2 nights</span></span>
+      <span class="hop"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="4" width="12" height="13" rx="2.5"/><path d="M6 11h12"/><circle cx="9" cy="14" r="1"/><circle cx="15" cy="14" r="1"/><path d="M8 21l1.5-3M16 21l-1.5-3"/></svg></span>
+      <span class="node"><span class="lbl">Chiang Mai</span><span class="tag">3 nights</span></span>
+      <span class="hop"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M17.8 19.2 16 11l3.5-3.5a2.1 2.1 0 0 0-3-3L13 8 4.8 6.2l-1.4 1.4 5.9 3.4-2.8 2.8-2.3-.5-1 1 3.4 2 2 3.4 1-1-.5-2.3 2.8-2.8 3.4 5.9z"/></svg></span>
+      <span class="node"><span class="lbl">Krabi</span><span class="tag">3 nights</span></span>
+      <span class="hop"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 15h16M6 15V9a2 2 0 0 1 2-2h5l3 3M9 7V5h3v2M3 19l1-1h16l1 1"/></svg></span>
+      <span class="node"><span class="lbl">Khao Sok</span><span class="tag">3 nights</span></span>
+      <span class="hop"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12h20"/><path d="M13 5l7 7-7 7"/></svg></span>
+      <span class="node"><span class="lbl">Bangkok</span><span class="tag">1 night</span></span>
+      <span class="hop"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12h20"/><path d="M13 5l7 7-7 7"/></svg></span>
+      <span class="node term"><span class="lbl">BKK</span><span class="tag">EK373 · 20:45</span></span>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <!-- ============ CALENDAR OVERVIEW ============ -->
+  <section class="region reveal" style="--accent:var(--bangkok)">
+    <div class="region-head">
+      <span class="idx">&#9670;</span>
+      <h2>At a glance</h2>
+      <span class="when">NOVEMBER 2026</span>
+    </div>
+    <p class="region-desc">The whole trip on one grid — colour-coded by region, travel days flagged. You land <span class="accent-mark">Sunday the 1st</span> and fly home Saturday the 14th.</p>
+    <div class="cal">
+      <div class="cal-head">Sun</div><div class="cal-head">Mon</div><div class="cal-head">Tue</div><div class="cal-head">Wed</div><div class="cal-head">Thu</div><div class="cal-head">Fri</div><div class="cal-head">Sat</div>
+      <div class="cal-day trip d-bkk"><svg class="cg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M17.8 19.2 16 11l3.5-3.5a2.1 2.1 0 0 0-3-3L13 8 4.8 6.2l-1.4 1.4 5.9 3.4-2.8 2.8-2.3-.5-1 1 3.4 2 2 3.4 1-1-.5-2.3 2.8-2.8 3.4 5.9z"/></svg><span class="cn">1</span><span class="cl">Land 07:35</span></div><div class="cal-day trip d-bkk"><span class="cn">2</span><span class="cl">Bangkok</span></div><div class="cal-day trip d-bkk"><svg class="cg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="4" width="12" height="13" rx="2.5"/><path d="M6 11h12"/><path d="M8 21l1.5-3M16 21l-1.5-3"/></svg><span class="cn">3</span><span class="cl">Night train</span></div><div class="cal-day trip d-cnx"><span class="cn">4</span><span class="cl">Chiang Mai</span></div><div class="cal-day trip d-cnx"><span class="cn">5</span><span class="cl">Chiang Mai</span></div><div class="cal-day trip d-cnx"><span class="cn">6</span><span class="cl">Chiang Mai</span></div><div class="cal-day trip d-krb"><svg class="cg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M17.8 19.2 16 11l3.5-3.5a2.1 2.1 0 0 0-3-3L13 8 4.8 6.2l-1.4 1.4 5.9 3.4-2.8 2.8-2.3-.5-1 1 3.4 2 2 3.4 1-1-.5-2.3 2.8-2.8 3.4 5.9z"/></svg><span class="cn">7</span><span class="cl">Fly south</span></div><div class="cal-day trip d-krb"><span class="cn">8</span><span class="cl">Krabi</span></div><div class="cal-day trip d-krb"><span class="cn">9</span><span class="cl">Krabi</span></div><div class="cal-day trip d-kks"><svg class="cg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 15h16M6 15V9a2 2 0 0 1 2-2h5l3 3"/><circle cx="8" cy="18.5" r="1.3"/><circle cx="16" cy="18.5" r="1.3"/></svg><span class="cn">10</span><span class="cl">Transfer in</span></div><div class="cal-day trip d-kks"><span class="cn">11</span><span class="cl">360 Issara</span></div><div class="cal-day trip d-kks"><span class="cn">12</span><span class="cl">360 Issara</span></div><div class="cal-day trip d-bkk"><svg class="cg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M17.8 19.2 16 11l3.5-3.5a2.1 2.1 0 0 0-3-3L13 8 4.8 6.2l-1.4 1.4 5.9 3.4-2.8 2.8-2.3-.5-1 1 3.4 2 2 3.4 1-1-.5-2.3 2.8-2.8 3.4 5.9z"/></svg><span class="cn">13</span><span class="cl">Fly to BKK</span></div><div class="cal-day trip d-bkk"><svg class="cg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M17.8 19.2 16 11l3.5-3.5a2.1 2.1 0 0 0-3-3L13 8 4.8 6.2l-1.4 1.4 5.9 3.4-2.8 2.8-2.3-.5-1 1 3.4 2 2 3.4 1-1-.5-2.3 2.8-2.8 3.4 5.9z"/></svg><span class="cn">14</span><span class="cl">Fly 20:45</span></div><div class="cal-day off"><span class="cn">15</span></div><div class="cal-day off"><span class="cn">16</span></div><div class="cal-day off"><span class="cn">17</span></div><div class="cal-day off"><span class="cn">18</span></div><div class="cal-day off"><span class="cn">19</span></div><div class="cal-day off"><span class="cn">20</span></div><div class="cal-day off"><span class="cn">21</span></div><div class="cal-day off"><span class="cn">22</span></div><div class="cal-day off"><span class="cn">23</span></div><div class="cal-day off"><span class="cn">24</span><span class="fest">✦ Yi Peng</span></div><div class="cal-day off"><span class="cn">25</span><span class="fest">✦ Loy Krathong</span></div><div class="cal-day off"><span class="cn">26</span></div><div class="cal-day off"><span class="cn">27</span></div><div class="cal-day off"><span class="cn">28</span></div><div class="cal-day off"><span class="cn">29</span></div><div class="cal-day off"><span class="cn">30</span></div><div class="cal-pad"></div><div class="cal-pad"></div><div class="cal-pad"></div><div class="cal-pad"></div><div class="cal-pad"></div>
+    </div>
+    <div class="cal-legend">
+      <span class="lg"><span class="sw sw-bkk"></span>Bangkok</span>
+      <span class="lg"><span class="sw sw-cnx"></span>Chiang Mai</span>
+      <span class="lg"><span class="sw sw-krb"></span>Krabi</span>
+      <span class="lg"><span class="sw sw-kks"></span>Khao Sok</span>
+      <span class="lg mv">&#9992; marks a travel / transit day</span>
+    </div>
+  </section>
+
+  <!-- ============ BANGKOK (arrival) ============ -->
+  <section class="region reveal" style="--accent:var(--bangkok)">
+    <div class="region-head">
+      <span class="idx">01 / 05</span>
+      <h2>Bangkok <span class="dash">— arrival</span></h2>
+      <span class="when">SUN 1 → TUE 3 NOV</span>
+    </div>
+    <p class="region-desc">Land at 7:35am and give yourself a soft start: temple-hop the old city, eat your way down the Chao Phraya, and shake off the flight before the <span class="accent-mark">night train north</span>.</p>
+
+    <div class="days">
+      <div class="day">
+        <div class="card">
+          <div class="datecol"><div class="dow">Sun</div><div class="dnum">1</div><div class="mon">Nov</div><div class="dtag">Arrive</div></div>
+          <div class="body">
+            <h3>Land &amp; ease in</h3>
+            <ul class="plan">
+              <li>Clear immigration; ARL to Phaya Thai, then BTS Sukhumvit to <b>Ploen Chit</b> — the Ritz is a 10-min walk at One Bangkok.</li>
+              <li>Late morning: <b>Wat Pho</b> and its giant reclining Buddha, then a foot massage at the temple's own school.</li>
+              <li>Sunset boat on the Chao Phraya; riverside dinner with <b>Wat Arun</b> lit up across the water. Early night — you've earned it.</li>
+            </ul>
+            <div class="logi">
+              <span class="chip"><span class="key">STAY</span> Ritz-Carlton · 90034653</span>
+              <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M2 12h20M13 5l7 7-7 7"/></svg>EK374 arr 07:35</span>
+              <span class="chip">check-in 15:00 — ask early</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="day">
+        <div class="card">
+          <div class="datecol"><div class="dow">Mon</div><div class="dnum">2</div><div class="mon">Nov</div><div class="dtag">City</div></div>
+          <div class="body">
+            <h3>Grand old Bangkok</h3>
+            <ul class="plan">
+              <li>Open-of-day at the <b>Grand Palace &amp; Wat Phra Kaew</b> (Emerald Buddha), before heat and crowds.</li>
+              <li>Ferry across to <b>Wat Arun</b>; climb the central prang for the view.</li>
+              <li>Afternoon: Jim Thompson House or a cool-down spa hour. Evening: <b>Yaowarat</b> Chinatown street-food crawl.</li>
+            </ul>
+            <div class="logi">
+              <span class="chip"><span class="key">STAY</span> Ritz-Carlton</span>
+              <span class="chip">MRT Lumphini 300 m</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="day">
+        <div class="card">
+          <div class="datecol"><div class="dow">Tue</div><div class="dnum">3</div><div class="mon">Nov</div><div class="dtag">Depart</div></div>
+          <div class="body">
+            <h3>Markets, then the rails</h3>
+            <ul class="plan">
+              <li>Slow morning: a <b>Maeklong railway + Damnoen Saduak floating market</b> half-day, or a guided food tour.</li>
+              <li>Afternoon: coffee, a massage, and pack an overnight bag you can reach on the train.</li>
+              <li><b>18:40</b>: board Special Express #9 at Krung Thep Aphiwat — e-tickets issued. Dinner in the dining car, berths down.</li>
+            </ul>
+            <div class="logi">
+              <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="6" y="4" width="12" height="13" rx="2.5"/><path d="M6 11h12"/></svg><span class="key">TRAIN</span> 18:40 → 07:15</span>
+              <span class="chip">at station by 18:10</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SIGNATURE: the sleeper ticket -->
+    <div class="ticket-zone reveal">
+      <div class="ticket">
+        <span class="stub-line"></span>
+        <div class="t-left">
+          <div class="t-tophead">
+            <span class="badge">Sleeper #9 &middot; ticketed</span>
+            <span class="svc">State Railway of Thailand · Special Express</span>
+          </div>
+          <div class="t-route">
+            <div class="t-stn">
+              <span class="time">18:40</span>
+              <span class="place">Krung Thep Aphiwat</span>
+              <span class="sub">Bangkok · Tue 3 Nov</span>
+            </div>
+            <div class="t-arrow">
+              <span class="dur">≈ 13 h · 751 km</span>
+              <span class="rail"><svg viewBox="0 0 200 14" preserveAspectRatio="none" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M0 4h200M0 10h200"/><path d="M14 4v6M42 4v6M70 4v6M98 4v6M126 4v6M154 4v6M182 4v6"/></svg></span>
+              <span class="dur">overnight</span>
+            </div>
+            <div class="t-stn" style="text-align:right">
+              <span class="time">07:15</span>
+              <span class="place">Chiang Mai</span>
+              <span class="sub">Wed 4 Nov (+1)</span>
+            </div>
+          </div>
+          <div class="t-meta">
+            <span class="chip"><span class="key">CLASS</span> 2nd A/C sleeper &times; 2</span>
+            <span class="chip"><span class="key">REF</span> …6901 / …6902</span>
+            <span class="chip"><span class="key">KTW</span> &rarr; CGM</span>
+          </div>
+        </div>
+        <div class="t-right">
+          <div>
+            <div class="rlabel">Night 03</div>
+            <div class="rnight">Sleep on<br>the move</div>
+          </div>
+          <div>
+            <div class="barcode" aria-hidden="true">
+              <i style="height:70%"></i><i style="height:100%"></i><i style="height:45%"></i><i style="height:90%"></i><i style="height:60%"></i><i style="height:100%"></i><i style="height:40%"></i><i style="height:80%"></i><i style="height:55%"></i><i style="height:95%"></i><i style="height:50%"></i><i style="height:100%"></i>
+            </div>
+            <div class="seat">Be at the station by <b>18:10</b>.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CHIANG MAI ============ -->
+  <section class="region reveal" style="--accent:var(--chiangmai)">
+    <div class="region-head">
+      <span class="idx">02 / 05</span>
+      <h2>Chiang Mai <span class="dash">— the north</span></h2>
+      <span class="when">WED 4 → SAT 7 NOV</span>
+    </div>
+    <p class="region-desc">Wake up in the mountains. Lanna temples, an <span class="accent-mark">ethical elephant day</span>, cooking classes and cool air — the exhale after Bangkok's heat.</p>
+
+    <div class="note">
+      <b>Heads-up on lanterns:</b> the famous Yi Peng / Loy Krathong festival lands about <b>Nov 24–25</b> this year — roughly ten days after you fly home. You'll narrowly miss the sky lanterns, so plan Chiang Mai around its year-round temples and jungle rather than the festival.
+    </div>
+
+    <div class="days">
+      <div class="day">
+        <div class="card">
+          <div class="datecol"><div class="dow">Wed</div><div class="dnum">4</div><div class="mon">Nov</div><div class="dtag">Arrive</div></div>
+          <div class="body">
+            <h3>Off the train, into the Old City</h3>
+            <ul class="plan">
+              <li>Arrive 07:15; breakfast near the station, check in inside the moat.</li>
+              <li>Temple wander on foot: <b>Wat Chedi Luang</b>, <b>Wat Phra Singh</b>, and the quiet lanes between.</li>
+              <li>Evening: the Night Bazaar and a bowl of <b>khao soi</b>, the north's signature curry noodle.</li>
+            </ul>
+            <div class="logi">
+              <span class="chip"><span class="key">STAY</span> Chiang Mai</span>
+              <span class="chip">arr 07:15</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="day">
+        <div class="card">
+          <div class="datecol"><div class="dow">Thu</div><div class="dnum">5</div><div class="mon">Nov</div><div class="dtag">Day trip</div></div>
+          <div class="body">
+            <h3>Elephants, done right</h3>
+            <ul class="plan">
+              <li>Full day at an <b>ethical sanctuary</b> (Elephant Nature Park and similar) — feeding and observing, no riding.</li>
+              <li>Back by evening; unwind in <b>Nimman</b>, the café and craft-beer district.</li>
+            </ul>
+            <div class="logi">
+              <span class="chip"><span class="key">STAY</span> Chiang Mai</span>
+              <span class="chip">book the sanctuary ahead</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="day">
+        <div class="card">
+          <div class="datecol"><div class="dow">Fri</div><div class="dnum">6</div><div class="mon">Nov</div><div class="dtag">Explore</div></div>
+          <div class="body">
+            <h3>Mountain temple &amp; a wok</h3>
+            <ul class="plan">
+              <li>Morning: <b>Wat Phra That Doi Suthep</b>, the gold chedi on the mountain above the city.</li>
+              <li>Afternoon: a hands-on <b>Thai cooking class</b> — or chase waterfalls at Doi Inthanon if you'd rather be in nature.</li>
+              <li>Repack for the tropics; tomorrow you fly to the Andaman.</li>
+            </ul>
+            <div class="logi">
+              <span class="chip"><span class="key">STAY</span> Chiang Mai</span>
+              <span class="chip">fly south tomorrow</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="transfer reveal">
+      <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M17.8 19.2 16 11l3.5-3.5a2.1 2.1 0 0 0-3-3L13 8 4.8 6.2l-1.4 1.4 5.9 3.4-2.8 2.8-2.3-.5-1 1 3.4 2 2 3.4 1-1-.5-2.3 2.8-2.8 3.4 5.9z"/></svg></span>
+      <div>
+        <div class="t-main">Fly Chiang Mai → Krabi</div>
+        <div class="t-sub">CNX → KBV · direct · book early</div>
+      </div>
+      <div class="t-time">Sat 7 Nov · morning<br>≈ 2 h in the air</div>
+    </div>
+  </section>
+
+  <!-- ============ KRABI ============ -->
+  <section class="region reveal" style="--accent:var(--krabi)">
+    <div class="region-head">
+      <span class="idx">03 / 05</span>
+      <h2>Krabi <span class="dash">— the Andaman</span></h2>
+      <span class="when">SAT 7 → TUE 10 NOV</span>
+    </div>
+    <p class="region-desc">Swap mountains for limestone and sea. <span class="accent-mark">Longtail boats, castaway beaches</span>, and karst cliffs rising straight out of turquoise water.</p>
+
+    <div class="days">
+      <div class="day">
+        <div class="card">
+          <div class="datecol"><div class="dow">Sat</div><div class="dnum">7</div><div class="mon">Nov</div><div class="dtag">Arrive</div></div>
+          <div class="body">
+            <h3>Fly south, feet in the sand</h3>
+            <ul class="plan">
+              <li>Morning flight down; transfer to <b>Ao Nang</b> or boat over to <b>Railay</b>.</li>
+              <li>Afternoon on the beach, first Andaman sunset, a long seafood dinner.</li>
+            </ul>
+            <div class="logi">
+              <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M2 12h20M13 5l7 7-7 7"/></svg><span class="key">FLY</span> CNX→KBV</span>
+              <span class="chip"><span class="key">STAY</span> Ao Nang / Railay</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="day">
+        <div class="card">
+          <div class="datecol"><div class="dow">Sun</div><div class="dnum">8</div><div class="mon">Nov</div><div class="dtag">Islands</div></div>
+          <div class="body">
+            <h3>Island-hop</h3>
+            <ul class="plan">
+              <li>Full-day boat trip: the <b>Hong Islands</b> lagoon or the classic <b>4-Islands</b> — Phra Nang cave beach, Tup, Chicken, Poda.</li>
+              <li>Snorkel, swim, beach lunch; back for sunset.</li>
+            </ul>
+            <div class="logi">
+              <span class="chip"><span class="key">STAY</span> Krabi</span>
+              <span class="chip">reef-safe sunscreen</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="day">
+        <div class="card">
+          <div class="datecol"><div class="dow">Mon</div><div class="dnum">9</div><div class="mon">Nov</div><div class="dtag">Explore</div></div>
+          <div class="body">
+            <h3>Cliffs, jungle &amp; steam</h3>
+            <ul class="plan">
+              <li>Sunrise option: the <b>Tiger Cave Temple</b>'s 1,260 steps for the summit view over the plains.</li>
+              <li>Or the inland <b>Emerald Pool &amp; hot springs</b> in the rainforest; easy afternoon back at the beach.</li>
+            </ul>
+            <div class="logi">
+              <span class="chip"><span class="key">STAY</span> Krabi</span>
+              <span class="chip">drive to Khao Sok tomorrow</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="transfer reveal">
+      <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 15h16M6 15V9a2 2 0 0 1 2-2h5l3 3M3 19l1-1h16l1 1"/><circle cx="8" cy="18.5" r="1.3"/><circle cx="16" cy="18.5" r="1.3"/></svg></span>
+      <div>
+        <div class="t-main">Transfer Krabi → 360° Issara</div>
+        <div class="t-sub">included in package · meet 500Rai Pier Office, Chiew Larn</div>
+      </div>
+      <div class="t-time">Tue 10 Nov · boat 12:00 or 15:30<br>≈ 2 h road + 1.5 h boat</div>
+    </div>
+  </section>
+
+  <!-- ============ KHAO SOK ============ -->
+  <section class="region reveal" style="--accent:var(--khaosok)">
+    <div class="region-head">
+      <span class="idx">04 / 05</span>
+      <h2>Khao Sok <span class="dash">&mdash; on the lake</span></h2>
+      <span class="when">TUE 10 &rarr; FRI 13 NOV</span>
+    </div>
+    <p class="region-desc">Three nights <span class="accent-mark">floating on Cheow Lan Lake</span> at 360&deg; Issara, ringed by limestone towers in one of the oldest rainforests on earth. The centrepiece of the trip.</p>
+
+    <div class="note">
+      <b>Transfers are included.</b> The package covers a private car from Krabi (~2 h) to the 500Rai Pier Office at Chiew Larn, then a 1.5 h longtail. Scheduled boats leave the pier at <b>12:00 or 15:30 only</b>. Pack small — you climb down stairs to the boat, and big cases can stay at the pier office. Bring <b>THB 340 each in cash</b> for the national park fee.</div>
+
+    <div class="days">
+      <div class="day">
+        <div class="card">
+          <div class="datecol"><div class="dow">Tue</div><div class="dnum">10</div><div class="mon">Nov</div><div class="dtag">Arrive</div></div>
+          <div class="body">
+            <h3>Drive, then the longtail</h3>
+            <ul class="plan">
+              <li>Leave Krabi mid-morning &mdash; about <b>2 h by road</b> to Chiew Larn, for the 12:00 boat.</li>
+              <li><b>1.5 h by longtail</b> across the lake, sightseeing on the way; the resort appears like a floating village.</li>
+              <li>Check in from 14:00, swim off the deck, set dinner over the water. <b>17:00</b>: wildlife safari &amp; sunset cruise.</li>
+            </ul>
+            <div class="logi">
+              <span class="chip"><span class="key">STAY</span> 360&deg; Issara</span>
+              <span class="chip">booking 0592406</span>
+              <span class="chip">3-Night Essence · all-in</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="day">
+        <div class="card">
+          <div class="datecol"><div class="dow">Wed</div><div class="dnum">11</div><div class="mon">Nov</div><div class="dtag">The lake</div></div>
+          <div class="body">
+            <h3>Nowhere to be</h3>
+            <ul class="plan">
+              <li>Kayak straight off your own balcony &mdash; each room has one.</li>
+              <li>Swim in the fresh water, read, watch the light move across the karsts.</li>
+              <li><b>Pakarang Cave Trail</b> at 09:45 — 1.5 km trek plus a bamboo raft (THB 200 each, cash).</li>
+            </ul>
+            <div class="logi">
+              <span class="chip"><span class="key">STAY</span> 360&deg; Issara</span>
+              <span class="chip">A/C 12:00–06:00 only</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="day">
+        <div class="card">
+          <div class="datecol"><div class="dow">Thu</div><div class="dnum">12</div><div class="mon">Nov</div><div class="dtag">Dawn</div></div>
+          <div class="body">
+            <h3>Last full day on the water</h3>
+            <ul class="plan">
+              <li>Morning lake sightseeing — gibbons, hornbills and elephants along the shoreline.</li>
+              <li><b>Prakai Petch Cave Trail</b> &mdash; swamp forest, small waterfalls, glittering cave (runs Mon/Wed/Sat, so today works).</li>
+              <li>Last sunset cruise at 17:00. Pack tonight — <b>check-out is 10:00</b>.</li>
+            </ul>
+            <div class="logi">
+              <span class="chip"><span class="key">STAY</span> 360&deg; Issara</span>
+              <span class="chip">check-out 10:00</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="transfer reveal">
+      <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M17.8 19.2 16 11l3.5-3.5a2.1 2.1 0 0 0-3-3L13 8 4.8 6.2l-1.4 1.4 5.9 3.4-2.8 2.8-2.3-.5-1 1 3.4 2 2 3.4 1-1-.5-2.3 2.8-2.8 3.4 5.9z"/></svg></span>
+      <div>
+        <div class="t-main">Boat, car, then fly &rarr; Bangkok</div>
+        <div class="t-sub">360&deg; Issara &rarr; Chiew Larn &rarr; Surat Thani (URT) &rarr; BKK</div>
+      </div>
+      <div class="t-time">Fri 13 Nov &middot; boat 10:30<br>reaches URT ~13:00</div>
+    </div>
+  </section>
+
+  <!-- ============ BANGKOK (finale) ============ -->
+  <section class="region reveal" style="--accent:var(--bangkok)">
+    <div class="region-head">
+      <span class="idx">05 / 05</span>
+      <h2>Bangkok <span class="dash">&mdash; the finale</span></h2>
+      <span class="when">FRI 13 &rarr; SAT 14 NOV</span>
+    </div>
+    <p class="region-desc">One night back in the capital, then <span class="accent-mark">a full final day</span> — the 20:45 flight leaves the whole Saturday open.</p>
+
+    <div class="days">
+      <div class="day">
+        <div class="card">
+          <div class="datecol"><div class="dow">Fri</div><div class="dnum">13</div><div class="mon">Nov</div><div class="dtag">Return</div></div>
+          <div class="body">
+            <h3>Off the lake, into the city</h3>
+            <ul class="plan">
+              <li>Breakfast, check out at 10:00, scheduled boat at 10:30, car to Surat Thani — at URT about 13:00.</li>
+              <li><b>VZ353 18:50 &rarr; 20:00</b> into Bangkok. (VZ355 at 13:10 needs a THB 5,000 private boat leaving 10:00.)</li>
+              <li>Late dinner near the hotel — you land at 20:00.</li>
+            </ul>
+            <div class="logi">
+              <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M2 12h20M13 5l7 7-7 7"/></svg><span class="key">FLY</span> URT&rarr;BKK 18:50</span>
+              <span class="chip"><span class="key">STAY</span> Bangkok</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="day">
+        <div class="card">
+          <div class="datecol"><div class="dow">Sat</div><div class="dnum">14</div><div class="mon">Nov</div><div class="dtag">Depart</div></div>
+          <div class="body">
+            <h3>Fly home</h3>
+            <ul class="plan">
+              <li>A full last day — ICONSIAM, Ayutthaya, or whatever you missed. Your flight is in the evening.</li>
+              <li>Leave the city by <b>~5:00pm</b> for Suvarnabhumi — allow for traffic.</li>
+              <li><b>20:45</b>: EK373 to Dubai, then JFK at 08:15 Sunday.</li>
+            </ul>
+            <div class="logi">
+              <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M2 12h20M13 5l7 7-7 7"/></svg><span class="key">DEP</span> EK373 20:45</span>
+              <span class="chip">at airport by ~17:45</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER NOTES ============ -->
+  <footer class="foot reveal">
+    <h2>Before you go</h2>
+    <div class="tips">
+      <div class="tip"><span class="num">01</span><div><b>Train #9 is ticketed.</b> Two 2nd-class A/C berths (res. 34511470), Bangkok 18:40 → Chiang Mai 07:15.</div></div>
+      <div class="tip"><span class="num">02</span><div><b>Booked.</b> Emirates H2M5FJ, Ritz-Carlton (90034653), Sleeper #9, FD3072 (UYTUHF), 360° Issara (0592406). The Krabi transfer is included in the package.</div></div>
+      <div class="tip"><span class="num">03</span><div><b>Great timing.</b> Early November is the front edge of the cool, dry season — the Andaman is drying out and Khao Sok is at its lushest.</div></div>
+      <div class="tip"><span class="num">04</span><div><b>One flight left to book.</b> VZ353 at 18:50 on the 13th fits the resort’s 10:30 boat; VZ355 at 13:10 only works with a THB 5,000 private boat.</div></div>
+      <div class="tip"><span class="num">05</span><div><b>Cash for the park fee.</b> THB 340 per person on arrival at Khao Sok, plus THB 200 each for the Pakarang cave trail — not included.</div></div>
+      <div class="tip"><span class="num">06</span><div><b>This is a shape, not a script.</b> Every night is movable — treat it as a strong default and bend it to your energy.</div></div>
+    </div>
+    <div class="dl">
+      <a class="dlbtn" href="Thailand-Itinerary-Nov2026.pdf">Download itinerary (PDF)</a>
+      <a class="dlbtn" href="Thailand-Calendar-Nov2026.pdf">Download calendar (PDF, print landscape)</a>
+    </div>
+    <div class="sign">// 14 days · 13 nights · Bangkok — Chiang Mai — Krabi — Khao Sok — Bangkok · Nov 2026</div>
+  </footer>
+
+</main>
+
+<script>
+  (function(){
+    var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var els = document.querySelectorAll('.reveal');
+    if(reduce || !('IntersectionObserver' in window)){
+      els.forEach(function(e){e.classList.add('in');});
+      return;
+    }
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if(en.isIntersecting){ en.target.classList.add('in'); io.unobserve(en.target); }
+      });
+    }, {threshold:0.12, rootMargin:'0px 0px -8% 0px'});
+    els.forEach(function(e){io.observe(e);});
+  })();
+</script>
+</body>
+</html>
