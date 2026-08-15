@@ -40,7 +40,7 @@ trip = {
  10:('kks','Transfer in','Krabi ~2h → Chiew Larn → boat 1.5h','car','s-krb-kks'),
  11:('kks','360 Issara','Kayak off the balcony · swim','',''),
  12:('kks','360 Issara','Cave trail · sunset safari 17:00','',''),
- 13:('bkk','Boat out · fly BKK','Check out 10:00 → URT → BKK','plane','s-kks-bkk'),
+ 13:('bkk','Boat out · fly north','Check out 10:00 → URT → Bangkok','plane','s-kks-bkk'),
  14:('bkk','Fly home 20:45','Full day · leave city ~17:00','plane',''),
 }
 fest={}
@@ -183,9 +183,9 @@ tr.pick td.t{{border-left:2px solid #C08A26;padding-left:4px}}
       <table>
         <tr><td class="t">Resort boat 10:30</td><td class="n">scheduled</td><td class="p">URT ~13:00</td></tr>
         <tr><td class="t">13:10 &rarr; 14:25</td><td class="n">VZ355 · needs private boat</td><td class="p">$68</td></tr>
-        <tr class="pick"><td class="t">18:50 &rarr; 20:00</td><td class="n">VZ353 · fits 10:30 boat</td><td class="p">$110</td></tr>
+        <tr class="pick"><td class="t">18:50 &rarr; 20:05</td><td class="n">VZ353 · fits 10:30 boat</td><td class="p">$110</td></tr>
       </table>
-      <div class="foot">Resort: 10:30 boat reaches URT ~13:00 — too tight for 13:10. Either private boat (THB 5,000, dep 10:00) or take 18:50. Check-out is 10:00.</div>
+      <div class="foot"><strong>Not yet booked.</strong> 10:30 boat reaches URT ~13:00 — too tight for 13:10. An afternoon DMK flight also works.</div>
     </div>
 
   </div>
