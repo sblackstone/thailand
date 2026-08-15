@@ -40,7 +40,7 @@ trip = {
  10:('kks','Transfer in','Krabi ~2h → Chiew Larn → boat 1.5h','car','s-krb-kks'),
  11:('kks','360 Issara','Kayak off the balcony · swim','',''),
  12:('kks','360 Issara','Cave trail · sunset safari 17:00','',''),
- 13:('bkk','Boat out · fly north','Check out 10:00 → URT → Bangkok','plane','s-kks-bkk'),
+ 13:('bkk','Boat out · SL741 16:40','Check out 10:00 → URT → DMK 17:55','plane','s-kks-bkk'),
  14:('bkk','Fly home 20:45','Full day · leave city ~17:00','plane',''),
 }
 fest={}
@@ -182,10 +182,10 @@ tr.pick td.t{{border-left:2px solid #C08A26;padding-left:4px}}
       <div class="lhd"><span class="ldate">FRI 13</span><span class="lroute">Khao Sok &rarr; Bangkok</span><span class="lmode">Road + Air</span></div>
       <table>
         <tr><td class="t">Resort boat 10:30</td><td class="n">scheduled</td><td class="p">URT ~13:00</td></tr>
-        <tr><td class="t">13:10 &rarr; 14:25</td><td class="n">VZ355 · needs private boat</td><td class="p">$68</td></tr>
-        <tr class="pick"><td class="t">18:50 &rarr; 20:05</td><td class="n">VZ353 · fits 10:30 boat</td><td class="p">$110</td></tr>
+        <tr class="pick"><td class="t">16:40 &rarr; 17:55</td><td class="n">SL741 &rarr; DMK · BOOKED</td><td class="p">OWUPXU</td></tr>
+        <tr><td class="t">18:50 &rarr; 20:05</td><td class="n">VZ353 &rarr; BKK · not taken</td><td class="p">$110</td></tr>
       </table>
-      <div class="foot"><strong>Not yet booked.</strong> 10:30 boat reaches URT ~13:00 — too tight for 13:10. An afternoon DMK flight also works.</div>
+      <div class="foot"><strong>Lands at Don Mueang</strong>, not Suvarnabhumi — but Saturday's flight home leaves from Suvarnabhumi. Red Line to Krung Thep Aphiwat, then MRT to Asok.</div>
     </div>
 
   </div>
