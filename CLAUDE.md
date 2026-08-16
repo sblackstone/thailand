@@ -17,10 +17,12 @@ site/
   index.html                      the itinerary — SINGLE SOURCE OF TRUTH
   Thailand-Itinerary-Nov2026.pdf  generated
   Thailand-Calendar-Nov2026.pdf   generated
+  Thailand-Dossier-Nov2026.pdf    generated
 scripts/
   fonts.py                        shared font fetch + @font-face
   build_itinerary_pdf.py          index.html -> PDF
   build_calendar.py               standalone one-page print calendar
+  build_dossier.py                standalone long-form agent-style dossier
 ```
 
 `site/` is what GitHub Pages serves.
@@ -35,11 +37,14 @@ then:
 ```bash
 python3 scripts/build_itinerary_pdf.py
 python3 scripts/build_calendar.py
+python3 scripts/build_dossier.py
 ```
 
-The calendar is separate — it has its own trip data near the top of
-`build_calendar.py` (the `trip` dict). Change a date or a hotel and you must
-update **both** the HTML and that dict, or the two documents disagree.
+**Two documents carry their own copy of the trip data.** The calendar has a
+`trip` dict near the top of `build_calendar.py`; the dossier has `DAYS` and
+`VOUCHERS` in `build_dossier.py`. Change a date, a hotel or a confirmation
+reference and you must update the HTML *and* both of those, or the three
+documents disagree with each other.
 
 ## Verify before committing
 
