@@ -75,10 +75,17 @@ DAYS = [
    "Take it gently; the day is built to be abandoned if you need to sleep."),
   ("fly", "EK374 arrives 07:35",
    "Dubai &rarr; Bangkok Suvarnabhumi (BKK), Airbus A380. Booking reference <code>H2M5FJ</code>."),
-  ("info", "Airport to the hotel",
-   "Clear immigration, then the <b>Airport Rail Link to Makkasan</b> and the MRT one stop pattern to "
-   "<b>Lumphini</b>. That exit is about 300 m from the door &mdash; noticeably better with cases than "
-   "walking from Ploen Chit."),
+  ("rail", "Airport to the hotel by rail",
+   "Clear immigration, then follow the signs down to the <b>Airport Rail Link</b> on the basement level "
+   "of the terminal. Three steps, about 45&ndash;50 minutes in total, roughly THB 65 each:<br>"
+   "<b>1.</b> City Line towards Phaya Thai, alighting at <b>Makkasan</b> (A6) &mdash; about 25 minutes, "
+   "THB 35. Buy a token at the machine or tap a contactless card.<br>"
+   "<b>2.</b> Follow the <b>166 m covered skywalk</b> from Makkasan to <b>MRT Phetchaburi</b> &mdash; "
+   "five minutes, longer with cases.<br>"
+   "<b>3.</b> MRT Blue Line towards <b>Hua Lamphong</b>, four stops: Sukhumvit, Queen Sirikit, "
+   "Khlong Toei, <b>Lumphini</b>. Leave by <b>Exit 1</b>, which feeds a walkway into One Bangkok; the "
+   "hotel is inside it, about 300 m from the door &mdash; noticeably better with cases than walking "
+   "from Ploen Chit. A taxi is 45 to 90 minutes depending on the expressway."),
   ("stay", "Check in &mdash; The Ritz-Carlton, Bangkok",
    "Confirmation <code>90034653</code> &middot; 2 nights &middot; Deluxe Room, 1 King, Park View. "
    "Standard check-in is 15:00, but early check-in is one of your Edit benefits &mdash; ask at the desk. "
@@ -92,9 +99,19 @@ DAYS = [
   ("info", "Wat Pho",
    "The reclining Buddha, 46 m of gilded plaster, and the country's oldest centre of massage teaching. "
    "A foot massage at the temple's own school is the correct way to spend the first afternoon."),
-  ("info", "Sunset on the Chao Phraya",
-   "A boat as the light goes, then a riverside dinner with <b>Wat Arun</b> lit across the water. "
-   "Early night &mdash; you'll have earned it."),
+  ("boat", "Manohra dining cruise &mdash; 20:00, booked",
+   "Reservation <code>YQGNYS</code> &middot; two people &middot; prepaid THB 11,000, "
+   "<b>non-refundable</b>. A converted teak rice barge from the Anantara Riverside pier on the Thonburi "
+   "bank, up the Chao Phraya past <b>Wat Arun</b> and the Grand Palace lit from the water. Premium set "
+   "menu with free-flow wine and beer. Getting there: MRT Lumphini &rarr; Si Lom, cross to BTS "
+   "Sala Daeng &rarr; Saphan Taksin, then the free Anantara shuttle boat from Sathorn pier every 15 "
+   "minutes &mdash; about an hour door to door, so leave by 18:00 and be at the pier by 19:00."),
+  ("info", "Confirm the boarding time &mdash; and it is a late night",
+   "The reservation reads 20:00, but Manohra's published cruise departs 19:30 with check-in from 19:15; "
+   "you are booked on the &ldquo;Third Round&rdquo; seating, so the times may differ. Settle it when you "
+   "call about dietary requirements &mdash; <code>riversidedining@anantara.com</code> or 02 476 0022. "
+   "Back at the hotel around 23:00, after 21 hours of travelling across a 12-hour shift. Keep the "
+   "afternoon soft; this is the one fixed point of the day."),
  ]),
 
  ("Monday", "November 2", "Bangkok", [
@@ -138,16 +155,28 @@ DAYS = [
   ("info", "The Old City on foot",
    "<b>Wat Chedi Luang</b>, whose 15th-century chedi lost its top thirty metres to an earthquake, and "
    "<b>Wat Phra Singh</b>. The quiet lanes between the two are the actual pleasure."),
+  ("info", "Wat Phra That Doi Suthep &mdash; this afternoon or not at all",
+   "The gold chedi on the mountain above the city, reached by 306 steps flanked by naga balustrades. "
+   "An hour up, an hour back. <b>The 5th and 6th are now both full-day booked tours</b>, so this "
+   "afternoon is the only slot it has left."),
   ("info", "Night Bazaar and khao soi",
    "The north's signature dish: egg noodles in a coconut curry broth, crisp noodles on top, pickled "
    "mustard greens and lime alongside."),
  ]),
 
  ("Thursday", "November 5", "Chiang Mai", [
-  ("tour", "Ethical elephant sanctuary &mdash; NOT YET BOOKED",
-   "A full day at a genuine sanctuary &mdash; Elephant Nature Park or similar. Feeding and observing, "
-   "no riding, no bathing circus. <b>This is the one thing to lock in first:</b> places sell out in "
-   "season, and it is the centrepiece of the day."),
+  ("tour", "Doi Inthanon private tour &mdash; 08:30, booked",
+   "Tripadvisor reference <code>1444673351</code>, TripGuru reference <code>7E51T410N0DP</code> "
+   "&middot; two adults &middot; USD 250 paid in full. Thailand's highest peak, the waterfalls and the "
+   "twin royal chedis, as a private full-day tour with an English-speaking guide. Hotel pick-up and "
+   "drop-off, air-conditioned vehicle, drinking water and the entrance fees (Doi Inthanon THB 300, "
+   "Twin Pagoda THB 100) are all included. <b>Lunch is not.</b> Free cancellation up to 24 hours before."),
+  ("info", "Two things TripGuru needs from you first",
+   "<b>1.</b> Your WhatsApp number and the hotel name, sent before <b>18:00 the day before</b> &mdash; "
+   "miss that and they collect you at a meeting point rather than the hotel. They email between 19:00 "
+   "and 21:00 the night before with the details. <b>2.</b> Passport name, number and date of birth for "
+   "both of you on their insurance form, which is required before the tour runs. Do both now. "
+   "<code>reservations@thetripguru.com</code>."),
   ("info", "Nimman in the evening",
    "The caf&eacute; and craft-beer district west of the moat. Where Chiang Mai goes when it isn't "
    "being a temple town."),
@@ -155,15 +184,24 @@ DAYS = [
  ]),
 
  ("Friday", "November 6", "Chiang Mai", [
-  ("info", "Wat Phra That Doi Suthep",
-   "The gold chedi on the mountain above the city, reached by 306 steps flanked by naga balustrades. "
-   "Morning, before the haze and the coaches."),
-  ("info", "The Old City, slowly",
-   "A market, a massage, one more bowl of khao soi."),
-  ("optional", "Or swap the whole day for Doi Inthanon",
-   "Thailand's highest peak, with waterfalls and the twin royal chedis. But treat it as a <b>full day</b>: "
-   "it is 2&ndash;2&frac12; hours each way, in the opposite direction from Doi Suthep. You would leave "
-   "about 07:00 and skip the temple. It does not fit as an afternoon."),
+  ("tour", "Elephant Nature Park &mdash; Elephant Highlands, booked",
+   "Booking <code>55796</code> &middot; two adults &middot; THB 12,000 total. A genuine sanctuary: "
+   "feeding and observing, no riding. <b>Hotel pick-up from U Chiang Mai between 08:00 and 08:45</b> "
+   "&mdash; wait in the lobby, and check your name with the driver, because not every pick-up vehicle "
+   "carries the park's logo. Vegan lunch, transport, admission, insurance and an English-speaking "
+   "guide are included."),
+  ("info", "THB 8,400 in cash, on the morning",
+   "Only the <b>THB 3,600</b> deposit has been paid. The <b>THB 8,400 balance must be settled in Thai "
+   "baht at the start of the trip</b> &mdash; not by card, not in advance. Draw it in Chiang Mai on the "
+   "5th. This is the largest cash requirement of the fortnight."),
+  ("info", "Confirm the pick-up point 72 hours ahead",
+   "If the park has not been told your pick-up point within 72 hours of the trip, you are expected to "
+   "start from their office at 1 Ratmakka Road instead. <code>info@elephantnaturepark.org</code> "
+   "or +66 53 272855."),
+  ("info", "It is a walking day, and a muddy one",
+   "Moderate to fit: mountainsides and slopes, up to <b>3&frac12; hours</b> of walking, often muddy. "
+   "A change of clothes and footwear is essential, plus a towel, hat, sunscreen, repellent and a "
+   "refillable bottle &mdash; in <b>one small day pack each</b>, which is the whole baggage allowance."),
   ("info", "Repack tonight",
    "Tomorrow starts early &mdash; you are away from the hotel by about 06:00."),
  ]),
@@ -294,6 +332,13 @@ VOUCHERS = [
   "Deluxe Room, 1 King Bed, Park View. Booked through Chase Travel (Trip 1027840438) under The Edit: "
   "breakfast for two daily, USD 100 property credit, welcome amenity, Wi-Fi, and upgrade / early "
   "check-in / late check-out subject to availability.", "Confirmed &middot; paid"),
+ ("Dining &mdash; Bangkok", "Manohra Dining Cruises &middot; Anantara Riverside", "YQGNYS",
+  "1 Nov &middot; 20:00 &middot; 2 people",
+  "Premium set menu with free-flow wine and beer, THB 5,500 each. Booked through TableCheck; "
+  "THB 11,000 charged in full. Departs the Anantara Riverside pier &mdash; free shuttle boat from "
+  "Sathorn pier every 15 minutes. No dietary restrictions were advised. Confirm the boarding time: "
+  "the published cruise leaves 19:30 with check-in 19:15.",
+  "Confirmed &middot; PREPAID, NON-REFUNDABLE"),
  ("Rail &mdash; Bangkok to Chiang Mai", "State Railway of Thailand", "34511470",
   "3 Nov &middot; 18:40 &rarr; 07:15",
   "Special Express #9, two 2nd-class A/C sleeper berths. Krung Thep Aphiwat (KTW) to Chiang Mai (CGM), "
@@ -303,6 +348,21 @@ VOUCHERS = [
   "Deluxe with Bathtub, 1 King, two guests. Booked through Chase Travel (Trip 1027896876). The night of "
   "the 3rd is paid deliberately so the room is available on arrival at 07:15 on the 4th. "
   "Breakfast not included, about THB 399 each.", "Confirmed &middot; NON-REFUNDABLE"),
+ ("Tour &mdash; Chiang Mai", "TripGuru Thailand &middot; via Tripadvisor", "1444673351",
+  "5 Nov &middot; 08:30 &middot; 2 adults",
+  "Doi Inthanon National Park, private full-day tour with an English-speaking guide. USD 250 paid in "
+  "full. Includes hotel pick-up and drop-off, air-conditioned vehicle, water and entrance fees "
+  "(park THB 300, Twin Pagoda THB 100); excludes lunch. TripGuru reference 7E51T410N0DP. "
+  "Send them your WhatsApp number and hotel before 18:00 the previous day, and passport details for "
+  "both travellers on their insurance form before the tour.",
+  "Confirmed &middot; free cancellation to 24 h before"),
+ ("Tour &mdash; Chiang Mai", "Elephant Nature Park", "55796",
+  "6 Nov &middot; pick-up 08:00&ndash;08:45 &middot; 2 adults",
+  "Elephant Highlands, single-day visit. THB 12,000 total: THB 3,600 deposit paid, "
+  "<b>THB 8,400 balance due in cash, in Thai baht, at the start of the trip</b>. Hotel pick-up from "
+  "U Chiang Mai; confirm the pick-up point at least 72 hours ahead or start from their office at "
+  "1 Ratmakka Road. Vegan lunch, transport, admission, insurance and guide included. "
+  "One small day pack per person.", "Confirmed &middot; PART-PAID, balance in cash"),
  ("Flight &mdash; Chiang Mai to Krabi", "Thai AirAsia", "UYTUHF",
   "7 Nov &middot; 07:55 &rarr; 09:55",
   "FD3072, Airbus A320, non-stop. Both passengers.", "Confirmed"),
@@ -598,14 +658,17 @@ def build() -> pathlib.Path:
       <li><b>360&deg; Issara</b> <code>+66 2 474 0360</code></li>
       <li><b>Thai Lion Air</b> <code>+66 2 529 9999</code></li>
       <li><b>Chase Travel</b> <code>1-855-234-2542</code> &mdash; Ritz-Carlton, U Chiang Mai, Centara</li>
+      <li><b>Elephant Nature Park</b> <code>+66 53 272855</code> &mdash; 07:00&ndash;17:00 daily</li>
+      <li><b>TripGuru</b> <code>+1 254 454 4878</code> &mdash; WhatsApp chat, Doi Inthanon tour</li>
+      <li><b>Manohra Cruises</b> <code>+66 2 476 0022</code></li>
     </ul>
   </div>
 
   <div class="ibox">
     <h3>Travel insurance</h3>
-    <p>A Berkshire Hathaway Travel Protection policy covering this trip is in place; the policy document
-    and number are in the trip email thread. Worth having the number to hand before you fly rather than
-    hunting for it from a boat.</p>
+    <p>Berkshire Hathaway Travel Protection, policy <code>201350715</code>, purchased 21 July 2026 and
+    covering this trip. This is the replacement policy issued with the correct number of flight
+    segments, so it is the one to quote. The full document is in the trip email thread.</p>
   </div>
 
   <div class="ibox">
@@ -619,17 +682,20 @@ def build() -> pathlib.Path:
 
   <div class="ibox">
     <h3>Cash</h3>
-    <p>Card works nearly everywhere, but two things on this trip are cash-only and both are at Khao Sok:
-    the national park fee of <b>THB 340 per person</b> on arrival, and <b>THB 200 each</b> for the
-    Pakarang cave trail. Draw that before you leave Krabi &mdash; there is no ATM on the lake.</p>
+    <p>Card works nearly everywhere, but three things on this trip are cash-only. The big one is in
+    Chiang Mai: the <b>THB 8,400 balance for Elephant Nature Park</b>, payable in Thai baht on the
+    morning of the 6th. Draw it on the 5th. The other two are at Khao Sok: the national park fee of
+    <b>THB 340 per person</b> on arrival and <b>THB 200 each</b> for the Pakarang cave trail &mdash;
+    draw those before you leave Krabi, as there is no ATM on the lake.</p>
   </div>
 
   <div class="ibox">
     <h3>Still to book</h3>
-    <p>Every night and every flight is confirmed. No activity is: the elephant sanctuary on the 5th is
-    the one to arrange first, as places sell out in season. The island-hopping boat on the 8th, Tiger
-    Cave or the Emerald Pool on the 9th, and the two cave trails at Khao Sok can all be arranged locally
-    &mdash; but the cave trails have fixed departure times and run only on certain days.</p>
+    <p>Every night and every flight is confirmed, and so are three activities: the Manohra dinner cruise
+    on the 1st, the Doi Inthanon tour on the 5th and Elephant Nature Park on the 6th. What is left is
+    all in the south, and all of it can be arranged locally: the island-hopping boat on the 8th, Tiger
+    Cave or the Emerald Pool on the 9th, and the two cave trails at Khao Sok &mdash; though the cave
+    trails have fixed departure times and run only on certain days.</p>
   </div>
 </div>
 

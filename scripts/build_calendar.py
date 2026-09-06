@@ -28,12 +28,12 @@ faces = font_face_css()
 # Nov 2026: Nov 1 = Sunday. Grid starts col 1, no leading pad.
 # Region key: bkk / cnx / krb / kks
 trip = {
- 1:('bkk','Land BKK 07:35','EK374 · Ritz-Carlton · Wat Pho','plane',''),
+ 1:('bkk','Land BKK 07:35','EK374 · Ritz-Carlton · Manohra cruise 20:00','plane',''),
  2:('bkk','Bangkok','Grand Palace · Wat Arun · Yaowarat','',''),
  3:('bkk','Night train 18:40','Bangkok → Chiang Mai · Sleeper #9','train','s-bkk-cnx'),
  4:('cnx','Chiang Mai · arr 07:15','U Chiang Mai · Old City temples','',''),
- 5:('cnx','U Chiang Mai','Elephant sanctuary day','',''),
- 6:('cnx','U Chiang Mai','Doi Suthep · Inthanon falls','',''),
+ 5:('cnx','U Chiang Mai','Doi Inthanon tour 08:30','',''),
+ 6:('cnx','U Chiang Mai','Elephant Nature Park · cash','',''),
  7:('krb','Fly CNX → KBV','Check out 12:00 → Centara Ao Nang','plane','s-cnx-krb'),
  8:('krb','Centara Ao Nang','Island-hop: Hong or 4-Islands','',''),
  9:('krb','Centara Ao Nang','Tiger Cave / Emerald Pool','',''),
