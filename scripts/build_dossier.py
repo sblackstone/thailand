@@ -222,25 +222,56 @@ DAYS = [
  ]),
 
  ("Sunday", "November 8", "Krabi", [
-  ("tour", "Island-hopping &mdash; not booked",
-   "A full day by boat: the <b>Hong Islands</b> lagoon, or the classic <b>4-Islands</b> route taking in "
-   "Phra Nang cave beach, Tup, Chicken and Poda. Longtails leave from the Ao Nang beach pier, about ten "
-   "minutes' walk. Book locally the day before."),
-  ("info", "The most weather-dependent day of the trip",
-   "Early-November seas are still unsettled and boat trips are the first thing cancelled. If it's rough, "
-   "swap with tomorrow and do the inland day instead &mdash; that flexibility is the whole reason these "
-   "two days sit next to each other."),
-  ("info", "Reef-safe sunscreen",
-   "Oxybenzone sunscreens are banned in Thai marine national parks."),
+  ("boat", "9 Islands private longtail &mdash; booked",
+   "GetYourGuide reference <code>GYGVN22MBRVZ</code> &middot; eight hours &middot; USD 299.43 paid in "
+   "full. Operated by <b>krabiteerapongtour</b>. The booking is for a <b>private boat</b> (priced as a "
+   "group of up to five, so it is just the two of you) &mdash; the route and the pace are yours to "
+   "settle with the boatman rather than a fixed shared-seat circuit."),
+  ("info", "Pick-up from the Centara lobby &mdash; time still to be confirmed",
+   "The operator collects you from the hotel lobby and returns you to the same place. <b>They contact "
+   "you to fix the pick-up time within 48 hours of booking</b> &mdash; booked 20 September, so expect "
+   "that by the 22nd, and chase them if it does not come: <code>+66 81 078 5454</code>."),
+  ("info", "Confirm the date when they call",
+   "The confirmation email does not print the activity date. <b>8 November is inferred</b> from the "
+   "cancellation deadline &mdash; GetYourGuide allows free cancellation until 24 hours before the "
+   "start, and the stated deadline is 09:00 on the 7th. It matches the plan, but have them say the "
+   "date out loud when they ring."),
+  ("info", "No guide, no meals",
+   "Neither is included. Carry cash for a beach lunch and plenty of water. Bring swimwear, sunglasses "
+   "and <b>reef-safe sunscreen</b> &mdash; oxybenzone sunscreens are banned in Thai marine national "
+   "parks. National park rules apply on the islands: no touching or handling marine life."),
+  ("info", "The weather call now has a deadline",
+   "Early-November seas are still unsettled and boat trips are the first thing cancelled. You can still "
+   "cancel for a <b>full refund until 09:00 on 7 November</b> &mdash; which is the morning you fly into "
+   "Krabi. Check the forecast and the sea state as soon as you land, because after that the money is "
+   "spent whatever the weather does. <b>The 9th is no longer a free swap</b> &mdash; the Emerald Pool "
+   "tour is booked too, and its own deadline is 08:00 on the 8th. Two consecutive mornings, two "
+   "decisions; make them both when you land on the 7th."),
  ]),
 
  ("Monday", "November 9", "Krabi", [
-  ("optional", "Tiger Cave Temple at sunrise",
-   "1,260 steps to the summit shrine and a view over the whole Krabi plain. Brutal in the heat, which is "
-   "the argument for going at dawn."),
-  ("optional", "Emerald Pool &amp; hot springs",
-   "Inland, in rainforest &mdash; a spring-fed pool the colour of its name and a set of warm cascades. "
-   "The gentler alternative to the steps; easy afternoon back at the beach."),
+  ("tour", "Emerald Pool, Hot Springs and Tiger Cave &mdash; 08:00, booked",
+   "GetYourGuide reference <code>GYGN6BWWFQFY</code> &middot; two adults &middot; USD 115.82 paid in "
+   "full. A small-group tour running <b>nine and a half hours</b>, operated by TripGuru Thailand. "
+   "The order of the day: a swim in the <b>Emerald Pool</b>, a walk along the <b>Blue Lagoon</b>, "
+   "lunch, the <b>Hot Springs Waterfall</b>, and finally the climb to <b>Tiger Cave Temple</b>. "
+   "English-speaking guide, hotel pick-up and drop-off, drinking water and <b>every entrance fee</b> "
+   "are included. Free cancellation until 08:00 on 8 November."),
+  ("info", "The 1,260 steps are the last thing you do, not the first",
+   "The old plan had Tiger Cave at dawn precisely because the climb is brutal in the heat. This tour "
+   "puts it at the <b>end</b> of a nine-and-a-half-hour day, in the afternoon. Nothing to be done about "
+   "the running order &mdash; just know it is coming and keep something in reserve. The summit view "
+   "over the whole Krabi plain is the reward."),
+  ("info", "Dress code, and what to carry",
+   "Some sites on this tour <b>enforce a temple dress code</b>: no sleeveless shirts, and shoulders, "
+   "underarms, back and knees covered. Carry a sarong or scarf to throw on. Also swimwear, a towel, a "
+   "change of clothes, hat, sunscreen, insect repellent and <b>cash</b> &mdash; lunch is not listed "
+   "among the inclusions."),
+  ("info", "Pick-up: they email the night before",
+   "TripGuru confirm the exact pick-up time and meeting point by email the evening before, and the "
+   "booking portal carries it from 19:00&ndash;21:00. <b>Be in the Centara lobby ten minutes early.</b> "
+   "The guide carries a TripGuru sign and will wait a maximum of ten minutes. Morning traffic in Ao "
+   "Nang runs heavier than the map apps predict."),
   ("info", "Long drive tomorrow",
    "Repack tonight and keep one small bag accessible &mdash; you climb down stairs into a boat "
    "tomorrow and the big cases can stay at the pier office."),
@@ -324,9 +355,11 @@ DAYS = [
 VOUCHERS = [
  ("Flights &mdash; international", "Emirates", "H2M5FJ",
   "Out 30 Oct &middot; back 14 Nov",
-  "EK202 JFK 19:45 &rarr; Dubai &middot; EK374 Dubai &rarr; Bangkok, arrives 07:35 on 1 Nov. "
-  "Returning EK373 Bangkok 20:45 on 14 Nov &rarr; Dubai &rarr; JFK 08:15 on the 15th. "
-  "Economy, both passengers, A380 on the Bangkok legs.", "Confirmed &middot; seats purchased"),
+  "<b>Out:</b> EK202 JFK <b>23:00</b> on 30 Oct &rarr; Dubai 19:45 on the 31st; 2 h 50 m in Dubai; "
+  "EK374 Dubai 22:35 &rarr; Bangkok <b>07:35</b> on 1 Nov. Twenty-one and a half hours door to door. "
+  "<b>Back:</b> EK373 Bangkok 20:45 on 14 Nov &rarr; Dubai 01:00; 1 h 35 m in Dubai; EK203 Dubai 02:35 "
+  "&rarr; JFK <b>08:15</b> on the 15th. Economy, both passengers, A380 on the JFK legs. One checked bag "
+  "each, up to 50 lb.", "Confirmed &middot; seats purchased"),
  ("Hotel &mdash; Bangkok", "The Ritz-Carlton, Bangkok", "90034653",
   "1&ndash;3 Nov &middot; 2 nights",
   "Deluxe Room, 1 King Bed, Park View. Booked through Chase Travel (Trip 1027840438) under The Edit: "
@@ -371,6 +404,21 @@ VOUCHERS = [
   "Deluxe Room, 1 King Bed, Pool Access. Booked through Chase Travel (Trip 1027898679). Check-in 15:00, "
   "check-out 12:00. Ask for a room away from the drainage canal. Breakfast extra, THB 325&ndash;650 each.",
   "Confirmed &middot; NON-REFUNDABLE"),
+ ("Boat &mdash; Krabi", "krabiteerapongtour &middot; via GetYourGuide", "GYGVN22MBRVZ",
+  "8 Nov &middot; 8 hours &middot; private boat",
+  "9 Islands private longtail. USD 299.43 paid in full; booked as a group of up to five, so the boat is "
+  "yours. Pick-up and drop-off at the Centara Ao Nang lobby &mdash; <b>pick-up time to be confirmed by "
+  "the operator</b>. No guide and no meals included. Date inferred from the cancellation deadline; "
+  "confirm it when they call. Operator <code>+66 81 078 5454</code>.",
+  "Confirmed &middot; free cancellation to 09:00 on 7 Nov"),
+ ("Tour &mdash; Krabi", "TripGuru Thailand &middot; via GetYourGuide", "GYGN6BWWFQFY",
+  "9 Nov &middot; 08:00 &middot; 2 adults",
+  "Emerald Pool, Blue Lagoon, Hot Springs Waterfall and Tiger Cave Temple. Small-group tour, 9.5 hours, "
+  "English-speaking guide. USD 115.82 paid in full. Hotel pick-up and drop-off at the Centara Ao Nang "
+  "lobby, all entrance fees and drinking water included; lunch is not. Pick-up time confirmed by email "
+  "the evening before &mdash; be in the lobby ten minutes early, the guide waits ten minutes. "
+  "Temple dress code enforced. Operator <code>+1 254 454 4878</code>.",
+  "Confirmed &middot; free cancellation to 08:00 on 8 Nov"),
  ("Resort &mdash; Khao Sok", "360&deg; Issara Floating Resort", "0592406",
   "10&ndash;13 Nov &middot; 3 nights",
   "3-Night Essence package, all-inclusive. Private car from Krabi and the longtail transfer are both "
@@ -659,8 +707,10 @@ def build() -> pathlib.Path:
       <li><b>Thai Lion Air</b> <code>+66 2 529 9999</code></li>
       <li><b>Chase Travel</b> <code>1-855-234-2542</code> &mdash; Ritz-Carlton, U Chiang Mai, Centara</li>
       <li><b>Elephant Nature Park</b> <code>+66 53 272855</code> &mdash; 07:00&ndash;17:00 daily</li>
-      <li><b>TripGuru</b> <code>+1 254 454 4878</code> &mdash; WhatsApp chat, Doi Inthanon tour</li>
+      <li><b>TripGuru</b> <code>+1 254 454 4878</code> &mdash; WhatsApp chat; Doi Inthanon on the 5th
+        and Emerald Pool / Tiger Cave on the 9th</li>
       <li><b>Manohra Cruises</b> <code>+66 2 476 0022</code></li>
+      <li><b>krabiteerapongtour</b> <code>+66 81 078 5454</code> &mdash; the 9 Islands longtail</li>
     </ul>
   </div>
 
@@ -674,10 +724,11 @@ def build() -> pathlib.Path:
   <div class="ibox">
     <h3>Weather and conditions</h3>
     <p>Early November is the front edge of the cool, dry season, but it is a front edge rather than a
-    guarantee. The Andaman is still drying out &mdash; expect a wet afternoon or two around Krabi, and
-    treat the island-hopping day as the one to move. Khao Sok is at its lushest precisely because the
-    rain has only just stopped. Sea state is the thing that cancels boat trips, so ask at the hotel desk
-    the evening before rather than the morning of.</p>
+    guarantee. The Andaman is still drying out &mdash; expect a wet afternoon or two around Krabi. The
+    island day used to be the one to move freely; now that the longtail is booked, the decision has a
+    deadline: <b>09:00 on 7 November</b>, while cancellation is still free. Khao Sok is at its lushest
+    precisely because the rain has only just stopped. Sea state is the thing that cancels boat trips, so
+    ask at the hotel desk the evening before rather than the morning of.</p>
   </div>
 
   <div class="ibox">
@@ -691,11 +742,11 @@ def build() -> pathlib.Path:
 
   <div class="ibox">
     <h3>Still to book</h3>
-    <p>Every night and every flight is confirmed, and so are three activities: the Manohra dinner cruise
-    on the 1st, the Doi Inthanon tour on the 5th and Elephant Nature Park on the 6th. What is left is
-    all in the south, and all of it can be arranged locally: the island-hopping boat on the 8th, Tiger
-    Cave or the Emerald Pool on the 9th, and the two cave trails at Khao Sok &mdash; though the cave
-    trails have fixed departure times and run only on certain days.</p>
+    <p>Every night, every flight and five activities are now confirmed: the Manohra dinner cruise on the
+    1st, Doi Inthanon on the 5th, Elephant Nature Park on the 6th, the 9 Islands longtail on the 8th and
+    the Emerald Pool / Tiger Cave tour on the 9th. <b>One thing is left</b>: the two cave trails at Khao
+    Sok, arranged at the resort &mdash; and they have fixed departure times and run only on certain
+    days, so ask on arrival rather than the morning of.</p>
   </div>
 </div>
 
