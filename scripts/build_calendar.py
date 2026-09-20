@@ -30,7 +30,7 @@ faces = font_face_css()
 trip = {
  1:('bkk','Land BKK 07:35','EK374 · Ritz-Carlton · Manohra cruise 20:00','plane',''),
  2:('bkk','Bangkok','Grand Palace · Wat Arun · Yaowarat','',''),
- 3:('bkk','Night train 18:40','Bangkok → Chiang Mai · Sleeper #9','train','s-bkk-cnx'),
+ 3:('bkk','Ayutthaya · rail 19:45','Tour 09:00 → board at Ayutthaya','train','s-bkk-cnx'),
  4:('cnx','Chiang Mai · arr 07:15','U Chiang Mai · Old City temples','',''),
  5:('cnx','U Chiang Mai','Doi Inthanon tour 08:30','',''),
  6:('cnx','U Chiang Mai','Elephant Nature Park · cash','',''),
@@ -156,7 +156,7 @@ tr.pick td.t{{border-left:2px solid #C08A26;padding-left:4px}}
         <tr><td class="t">20:05 &rarr; 08:40</td><td class="n">#13 · 1st + 2nd</td><td class="p">12h35</td></tr>
         <tr><td class="t">22:30 &rarr; 12:10</td><td class="n">#51 · 2nd only</td><td class="p">13h40</td></tr>
       </table>
-      <div class="foot">Krung Thep Aphiwat (KTW → CGM). <strong>Ticketed — 2 berths, 2nd Class Sleeping A/C.</strong> Board 20 min before; arrive 30 min early.</div>
+      <div class="foot">Ticketed KTW → CGM — 2 berths, 2nd Class Sleeping A/C. <strong>Boarding downline at Ayutthaya, 19:45</strong> (confirmed by SRT) after the full-day tour. On the platform by 19:15; the stop is ~2 min.</div>
     </div>
 
     <div class="leg">

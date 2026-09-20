@@ -131,17 +131,37 @@ DAYS = [
  ]),
 
  ("Tuesday", "November 3", "Bangkok &rarr; the night train", [
-  ("optional", "Floating market, or a food tour &mdash; not both",
-   "The <b>Maeklong railway market</b> and <b>Damnoen Saduak</b> are 80&ndash;100 km southwest and the "
-   "market is finished by late morning, so those half-days leave the city around 06:30. If that's too "
-   "early after two days of jet lag, take a slow morning and a guided food tour instead."),
-  ("info", "Ask for late check-out",
-   "An Edit benefit, and worth claiming: a shower before thirteen hours in a sleeper berth is not nothing. "
-   "Pack an overnight bag you can actually reach from the berth."),
-  ("rail", "Special Express #9 &mdash; 18:40 to Chiang Mai",
-   "Krung Thep Aphiwat (KTW) 18:40 &rarr; Chiang Mai (CGM) 07:15 next morning. Roughly 13 hours, 751 km. "
-   "Two 2nd-class A/C sleeper berths, reservation <code>34511470</code>, e-tickets issued. "
-   "<b>Be at the station by 18:10.</b> Dinner in the dining car, then berths down."),
+  ("tour", "Ayutthaya, a private full day &mdash; 09:00, booked",
+   "GetYourGuide reference <code>GYG996VK39Z9</code> &middot; two adults &middot; USD 299.42 paid in "
+   "full. Ten hours, private car and English-speaking guide, operated by TripGuru Thailand. It is a "
+   "<b>customise-your-own</b> product &mdash; TripGuru will help you pick the temples if you ask. "
+   "Pick-up from the Ritz-Carlton lobby; they confirm the time one or two days ahead. Free cancellation "
+   "until 09:00 on 2 November."),
+  ("info", "Check out before you leave &mdash; you are not coming back",
+   "The tour collects you at 09:00 and the day ends at a railway station 80 km north. Check-out is "
+   "12:00, so settle it on the way out. <b>Late check-out is worthless to you now</b>, whatever The "
+   "Edit entitles you to. You have asked TripGuru to keep two backpacks in the car for the day."),
+  ("rail", "Special Express #9 &mdash; boarding at Ayutthaya, 19:45",
+   "The ticket reads Krung Thep Aphiwat (KTW) 18:40 &rarr; Chiang Mai (CGM) 07:15, reservation "
+   "<code>34511470</code>, two 2nd-class A/C berths. <b>You are joining it at Ayutthaya instead</b>, "
+   "which Thai Railways confirmed by email on 7 September: <i>&ldquo;Yes, absolutely&hellip; the train "
+   "is scheduled to depart from Ayutthaya at 19:45.&rdquo;</i> The ticket stays valid; you forfeit the "
+   "first 63 minutes you already paid for. <b>Be on the platform by 19:15</b> &mdash; the booked stop "
+   "is about two minutes, so know which end of the platform your coach stops at before the train "
+   "appears. Ask at the Ayutthaya ticket window when you arrive."),
+  ("info", "The whole evening rests on the drop-off, which is NOT yet agreed",
+   "The tour as sold ends where it began &mdash; back at the Ritz-Carlton. <b>A ten-hour day starting "
+   "at 09:00 finishes at 19:00, which cannot reach the 18:40 out of Bangkok under any circumstances.</b> "
+   "So the Ayutthaya drop-off is not a convenience, it is load-bearing. You emailed "
+   "<code>reservations@thetripguru.com</code> on 20 September asking for exactly that, plus luggage "
+   "storage in the car. <b>Get a written yes before 2 November</b>, which is when free cancellation "
+   "ends and your last cheap exit closes. If they refuse, the tour has to be cut short by mid-afternoon "
+   "and you go back for the Bangkok departure instead."),
+  ("info", "Dress code and cash",
+   "The ruins enforce a temple dress code: no exposed shoulders, underarms, back or knees, so carry a "
+   "scarf or long-sleeved shirt. Site entry fees are not included in the tour price &mdash; bring cash. "
+   "A combined pass covering six of the temples is sold at the gates and is worth it from about four "
+   "sites onward."),
  ]),
 
  ("Wednesday", "November 4", "Chiang Mai", [
@@ -337,7 +357,8 @@ DAYS = [
  ("Saturday", "November 14", "Bangkok &rarr; home", [
   ("info", "A half day, not a full one",
    "Check out at 12:00 and leave the bags at the desk. You have about five hours, so keep it central &mdash; "
-   "<b>ICONSIAM</b>, Jim Thompson House, a last massage. Not Ayutthaya; it needs the better part of a day."),
+   "<b>ICONSIAM</b>, Jim Thompson House, a last massage. Nothing that needs the better part of a day "
+   "&mdash; and Ayutthaya is already behind you, done properly on the 3rd."),
   ("info", "Leave by 17:00 &mdash; and mind the airport",
    "You arrived at <b>Don Mueang</b> yesterday but fly home from <b>Suvarnabhumi</b>. They are 50 km "
    "apart. From Asok it is one MRT stop to Phetchaburi and straight onto the <b>Airport Rail Link at "
@@ -372,10 +393,19 @@ VOUCHERS = [
   "Sathorn pier every 15 minutes. No dietary restrictions were advised. Confirm the boarding time: "
   "the published cruise leaves 19:30 with check-in 19:15.",
   "Confirmed &middot; PREPAID, NON-REFUNDABLE"),
+ ("Tour &mdash; Bangkok", "TripGuru Thailand &middot; via GetYourGuide", "GYG996VK39Z9",
+  "3 Nov &middot; 09:00 &middot; 2 adults",
+  "Customise-your-own full-day Ayutthaya tour, ten hours, private car and English-speaking guide. "
+  "USD 299.42 paid in full. Pick-up from the Ritz-Carlton lobby. <b>The drop-off at Ayutthaya railway "
+  "station is requested but not yet confirmed</b> &mdash; as sold, the tour returns to Bangkok. "
+  "Site entry fees not included. Operator <code>+1 254 454 4878</code>.",
+  "Confirmed &middot; free cancellation to 09:00 on 2 Nov"),
  ("Rail &mdash; Bangkok to Chiang Mai", "State Railway of Thailand", "34511470",
-  "3 Nov &middot; 18:40 &rarr; 07:15",
-  "Special Express #9, two 2nd-class A/C sleeper berths. Krung Thep Aphiwat (KTW) to Chiang Mai (CGM), "
-  "about 13 hours. E-tickets issued; be at the station by 18:10.", "Ticketed"),
+  "3 Nov &middot; board Ayutthaya 19:45 &rarr; 07:15",
+  "Special Express #9, two 2nd-class A/C sleeper berths, ticketed Krung Thep Aphiwat (KTW) to Chiang "
+  "Mai (CGM). <b>Boarding downline at Ayutthaya at 19:45</b>, confirmed by Thai Railways on 7 September; "
+  "the ticket stays valid and the berths are held for the whole run. Be on the platform by 19:15 "
+  "&mdash; the stop is about two minutes.", "Ticketed &middot; boarding at Ayutthaya"),
  ("Hotel &mdash; Chiang Mai", "U Chiang Mai", "2535552787",
   "3&ndash;7 Nov &middot; room held from the 3rd",
   "Deluxe with Bathtub, 1 King, two guests. Booked through Chase Travel (Trip 1027896876). The night of "
@@ -742,11 +772,12 @@ def build() -> pathlib.Path:
 
   <div class="ibox">
     <h3>Still to book</h3>
-    <p>Every night, every flight and five activities are now confirmed: the Manohra dinner cruise on the
-    1st, Doi Inthanon on the 5th, Elephant Nature Park on the 6th, the 9 Islands longtail on the 8th and
-    the Emerald Pool / Tiger Cave tour on the 9th. <b>One thing is left</b>: the two cave trails at Khao
-    Sok, arranged at the resort &mdash; and they have fixed departure times and run only on certain
-    days, so ask on arrival rather than the morning of.</p>
+    <p>Every night, every flight and six activities are now confirmed: the Manohra dinner cruise on the
+    1st, Ayutthaya on the 3rd, Doi Inthanon on the 5th, Elephant Nature Park on the 6th, the 9 Islands
+    longtail on the 8th and the Emerald Pool / Tiger Cave tour on the 9th. <b>One thing is left to
+    book</b>: the two cave trails at Khao Sok, arranged at the resort &mdash; they have fixed departure
+    times and run only on certain days, so ask on arrival rather than the morning of. <b>One thing is
+    left to confirm</b>, and it matters more: the Ayutthaya station drop-off on the 3rd.</p>
   </div>
 </div>
 
