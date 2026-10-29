@@ -37,9 +37,9 @@ trip = {
  7:('krb','Fly CNX → KBV','Check out 12:00 → Centara Ao Nang','plane','s-cnx-krb'),
  8:('krb','Centara Ao Nang','9 Islands · private longtail','',''),
  9:('krb','Centara Ao Nang','Emerald Pool · Tiger Cave 08:00','',''),
- 10:('kks','Transfer in','Krabi ~2h → Chiew Larn → boat 1.5h','car','s-krb-kks'),
- 11:('kks','360 Issara','Kayak off the balcony · swim','',''),
- 12:('kks','360 Issara','Cave trail · sunset safari 17:00','',''),
+ 10:('kks','Transfer in','Van 09:00 → Chiew Larn → boat 12:00','car','s-krb-kks'),
+ 11:('kks','360 Issara','Prakai Petch cave 09:45 · kayak','',''),
+ 12:('kks','360 Issara','Pakarang cave 09:45 · sunset 17:00','',''),
  13:('bkk','Boat out · SL741 16:40','Check out 10:00 → URT → DMK 17:55','plane','s-kks-bkk'),
  14:('bkk','Fly home 20:45','Full day · leave city ~17:00','plane',''),
 }
@@ -172,16 +172,16 @@ tr.pick td.t{{border-left:2px solid #C08A26;padding-left:4px}}
     <div class="leg tbd">
       <div class="lhd"><span class="ldate">TUE 10</span><span class="lroute">Krabi &rarr; 360 Issara</span><span class="lmode">Included</span></div>
       <table>
-        <tr class="pick"><td class="t">Krabi &rarr; Chiew Larn</td><td class="n">private car</td><td class="p">~2h00</td></tr>
-        <tr class="pick"><td class="t">Pier 12:00 or 15:30</td><td class="n">longtail boat</td><td class="p">~1h30</td></tr>
+        <tr class="pick"><td class="t">Centara 09:00</td><td class="n">private van</td><td class="p">~2h00</td></tr>
+        <tr class="pick"><td class="t">Pier 12:00</td><td class="n">shared boat</td><td class="p">~1h30</td></tr>
       </table>
-      <div class="foot"><strong>Transfer is included in the package.</strong> Meet at 500Rai Pier Office, Chiew Larn. Boats leave pier 12:00 / 15:30 only. Small bags — you climb down to the boat.</div>
+      <div class="foot"><strong>Included and confirmed by the resort.</strong> 500Rai Pier Office, Chiew Larn — walk left, opposite the Tourist Police. Fallback boat 15:30. Small bags — you climb down to the boat.</div>
     </div>
 
     <div class="leg">
       <div class="lhd"><span class="ldate">FRI 13</span><span class="lroute">Khao Sok &rarr; Bangkok</span><span class="lmode">Road + Air</span></div>
       <table>
-        <tr><td class="t">Resort boat 10:30</td><td class="n">scheduled</td><td class="p">URT ~13:00</td></tr>
+        <tr><td class="t">Resort boat 10:30</td><td class="n">van TBC</td><td class="p">URT ~13:00</td></tr>
         <tr class="pick"><td class="t">16:40 &rarr; 17:55</td><td class="n">SL741 &rarr; DMK · BOOKED</td><td class="p">OWUPXU</td></tr>
         <tr><td class="t">18:50 &rarr; 20:05</td><td class="n">VZ353 &rarr; BKK · not taken</td><td class="p">$110</td></tr>
       </table>

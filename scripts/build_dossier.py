@@ -298,50 +298,63 @@ DAYS = [
  ]),
 
  ("Tuesday", "November 10", "Khao Sok", [
-  ("road", "Leave Krabi by 09:00",
-   "About <b>2 hours by road</b> to the 500Rai Pier Office at Chiew Larn. The private car is included in "
-   "the resort package. Leave early enough for slack at the pier &mdash; you need to pay the park fee and "
-   "get bags down to the boat before it goes, not arrive dead on the hour."),
+  ("road", "Van from the Centara &mdash; 09:00",
+   "The resort's private van collects you from the Centara Ao Nang at <b>09:00</b>, confirmed in its "
+   "pre-arrival email. About <b>2 hours by road</b> to the 500Rai Pier Office at Chiew Larn, which leaves "
+   "time to pay the park fee and get bags down to the boat. At the pier, walk to the left; the office is "
+   "opposite the Tourist Police station."),
   ("boat", "Longtail across Cheow Lan Lake &mdash; 12:00",
    "About <b>1.5 hours</b>, sightseeing on the way, and the resort appears like a floating village under "
-   "the karsts. Boats out to the resort leave the pier at <b>12:00 or 15:30 only</b>. Miss the 12:00 and "
-   "you arrive after the sunset cruise below."),
-  ("info", "THB 340 each, in cash",
-   "The national park fee, payable on arrival and not included in the package. Bring it in cash."),
+   "the karsts. The shared <b>12:00</b> boat is the one booked; the only other is 15:30, and missing the "
+   "12:00 means arriving after the sunset cruise below."),
+  ("info", "THB 340 each, in Thai cash",
+   "The national park fee, payable on arrival and not included in the package. Only Thai cash is "
+   "accepted."),
   ("stay", "Check in &mdash; 360&deg; Issara Floating Resort",
-   "Booking <code>0592406</code> &middot; 3 nights &middot; the 3-Night Essence package, all-in. "
-   "Check-in from 14:00. <b>Air-conditioning runs 12:00&ndash;06:00 only</b>, and that applies to all "
-   "three nights."),
+   "Booking <code>0592406</code> &middot; 3 nights &middot; Deluxe Triple Room, the 3-Night Essence "
+   "(All-Inclusive Plus) package. Check-in from 14:00. A <b>room deposit of THB 3,500</b> (or USD/EUR 100) "
+   "is taken at check-in; have it in cash, as the connection on the lake is unreliable. "
+   "<b>Air-conditioning runs 12:00&ndash;06:00 only</b>, and that applies to all three nights."),
   ("tour", "Wildlife safari &amp; sunset cruise &mdash; 17:00",
-   "Included. Swim off the deck first; set dinner is served over the water."),
+   "About an hour by longtail around the resort, without a guide; elephants and deer are often seen, "
+   "though not guaranteed. The first of the package's three activities. Swim off the deck first; set "
+   "dinner is served over the water."),
  ]),
 
  ("Wednesday", "November 11", "Khao Sok", [
-  ("tour", "Pakarang Cave Trail &mdash; 09:45",
-   "The one fixed thing today: a 1.5 km trek plus a bamboo raft. <b>THB 200 each, cash</b>, not included."),
+  ("tour", "Prakai Petch Cave Trail &mdash; 09:45&ndash;12:45",
+   "The one fixed thing today: a gentle walk through swamp forest, past small waterfalls, to a glittering "
+   "cave. It runs <b>Monday, Wednesday and Saturday only</b>, so today is the one chance, and it is "
+   "offered only on the 3-Night Essence package. The second of the three activities."),
   ("info", "Then nothing at all",
    "Kayak straight off your own balcony &mdash; every room has one. Swim in the fresh water, read, "
    "watch the light move across the karsts. This is the day the trip is built around."),
  ]),
 
  ("Thursday", "November 12", "Khao Sok", [
-  ("info", "Morning on the lake",
-   "Sightseeing along the shoreline &mdash; gibbons, hornbills, and elephants if you are lucky."),
-  ("tour", "Prakai Petch Cave Trail &mdash; confirm this one",
-   "Swamp forest, small waterfalls and a glittering cave. The resort lists it as running "
-   "<b>Mon / Wed / Sat</b>, and the 12th is a <b>Thursday</b> &mdash; so confirm it on arrival rather "
-   "than counting on it. The morning lake trip above is the fallback."),
-  ("tour", "Last sunset cruise &mdash; 17:00", ""),
+  ("tour", "Pakarang Cave Trail &mdash; 09:45&ndash;12:45",
+   "A 1.5 km trek, then a 10-minute bamboo raft to the cave, and back the same way. Run with 500Rai "
+   "Floating Resort and it <b>must be booked in advance</b>. <b>THB 200 each</b> entrance, cash on site. "
+   "The third of the three activities."),
+  ("info", "Afternoon on the deck",
+   "Gibbons, hornbills, and elephants if you are lucky, along the shoreline."),
+  ("tour", "Last sunset cruise &mdash; 17:00",
+   "This would be a fourth activity, beyond the three the package includes &mdash; ask the resort "
+   "whether it is covered or charged."),
   ("info", "Pack tonight",
    "<b>Check-out is 10:00</b> and tomorrow is the tightest day of the trip."),
  ]),
 
  ("Friday", "November 13", "Khao Sok &rarr; Bangkok", [
   ("boat", "Check out 10:00, boat out at 10:30",
-   "<b>This is the only scheduled boat back.</b> It feeds a non-refundable flight the same afternoon, so "
-   "reconfirm it with the resort the day before and don't plan on arranging something later."),
-  ("road", "Chiew Larn to Surat Thani",
-   "At the airport (URT) around 13:00, which leaves roughly three and a half hours in hand."),
+   "<b>This is the only scheduled boat back</b>, a shared boat confirmed by the resort. It feeds a "
+   "non-refundable flight the same afternoon, so reconfirm it the day before and don't plan on "
+   "arranging something later."),
+  ("road", "Chiew Larn to Surat Thani &mdash; not yet arranged",
+   "The package includes a private van, but the resort's confirmation lists only the inbound one and "
+   "asks for drop-off details at least 24 hours ahead. Send them <b>Surat Thani airport, SL741 at "
+   "16:40</b> before travelling. At URT around 13:00, which leaves roughly three and a half hours in "
+   "hand."),
   ("fly", "SL741 &mdash; Surat Thani 16:40 &rarr; Don Mueang 17:55",
    "Thai Lion Air, arriving <b>Terminal 2</b>. Reservation code <code>OWUPXU</code>. Note this is "
    "<b>Don Mueang, not Suvarnabhumi</b>."),
@@ -451,10 +464,11 @@ VOUCHERS = [
   "Confirmed &middot; free cancellation to 08:00 on 8 Nov"),
  ("Resort &mdash; Khao Sok", "360&deg; Issara Floating Resort", "0592406",
   "10&ndash;13 Nov &middot; 3 nights",
-  "3-Night Essence package, all-inclusive. Private car from Krabi and the longtail transfer are both "
-  "included. Boats to the resort leave Chiew Larn at 12:00 or 15:30 only; the return boat is 10:30. "
-  "THB 340 each in cash for the national park fee. A/C runs 12:00&ndash;06:00.",
-  "Confirmed &middot; transfers included"),
+  "Deluxe Triple Room, 3-Night Essence (All-Inclusive Plus) package, three activities included. Van "
+  "from the Centara 09:00 on the 10th, shared boat from Chiew Larn 12:00; return boat 10:30 on the 13th. "
+  "Van to Surat Thani airport not yet requested. THB 340 each in Thai cash for the national park fee; "
+  "THB 3,500 room deposit at check-in. A/C runs 12:00&ndash;06:00.",
+  "Confirmed &middot; return van to arrange"),
  ("Flight &mdash; Surat Thani to Bangkok", "Thai Lion Air", "OWUPXU",
   "13 Nov &middot; 16:40 &rarr; 17:55",
   "SL741, arriving Don Mueang (DMK) Terminal 2 &mdash; not Suvarnabhumi. Both passengers ticketed; "
@@ -733,7 +747,7 @@ def build() -> pathlib.Path:
     <p>For anything urgent on the day, call the operator directly rather than the agent &mdash; it is
     faster.</p>
     <ul class="nums">
-      <li><b>360&deg; Issara</b> <code>+66 2 474 0360</code></li>
+      <li><b>360&deg; Issara</b> <code>+66 77 953 013</code> ext. 1 &mdash; 06:00&ndash;00:00; WhatsApp link for arrival-day problems in the pre-arrival email</li>
       <li><b>Thai Lion Air</b> <code>+66 2 529 9999</code></li>
       <li><b>Chase Travel</b> <code>1-855-234-2542</code> &mdash; Ritz-Carlton, U Chiang Mai, Centara</li>
       <li><b>Elephant Nature Park</b> <code>+66 53 272855</code> &mdash; 07:00&ndash;17:00 daily</li>
@@ -763,21 +777,24 @@ def build() -> pathlib.Path:
 
   <div class="ibox">
     <h3>Cash</h3>
-    <p>Card works nearly everywhere, but three things on this trip are cash-only. The big one is in
+    <p>Card works nearly everywhere, but several things on this trip are cash-only. The big one is in
     Chiang Mai: the <b>THB 8,400 balance for Elephant Nature Park</b>, payable in Thai baht on the
-    morning of the 6th. Draw it on the 5th. The other two are at Khao Sok: the national park fee of
-    <b>THB 340 per person</b> on arrival and <b>THB 200 each</b> for the Pakarang cave trail &mdash;
-    draw those before you leave Krabi, as there is no ATM on the lake.</p>
+    morning of the 6th. Draw it on the 5th. The rest are at Khao Sok: the national park fee of
+    <b>THB 340 per person</b> on arrival (Thai cash only), <b>THB 200 each</b> for the Pakarang cave
+    trail, and the resort's <b>THB 3,500 room deposit</b> at check-in, which may take a card but the
+    connection on the lake is unreliable. Draw those before you leave Krabi, as there is no ATM on the
+    lake.</p>
   </div>
 
   <div class="ibox">
     <h3>Still to book</h3>
     <p>Every night, every flight and six activities are now confirmed: the Manohra dinner cruise on the
     1st, Ayutthaya on the 3rd, Doi Inthanon on the 5th, Elephant Nature Park on the 6th, the 9 Islands
-    longtail on the 8th and the Emerald Pool / Tiger Cave tour on the 9th. <b>One thing is left to
-    book</b>: the two cave trails at Khao Sok, arranged at the resort &mdash; they have fixed departure
-    times and run only on certain days, so ask on arrival rather than the morning of. <b>One thing is
-    left to confirm</b>, and it matters more: the Ayutthaya station drop-off on the 3rd.</p>
+    longtail on the 8th and the Emerald Pool / Tiger Cave tour on the 9th. <b>Two things are left to
+    book</b>, both with 360&deg; Issara: the package's three included activities, which have limited
+    places, and the van from the pier to Surat Thani airport on the 13th, which the resort needs at
+    least 24 hours in advance. <b>One thing is left to confirm</b>, and it matters more: the Ayutthaya
+    station drop-off on the 3rd.</p>
   </div>
 </div>
 
